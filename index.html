@@ -3,488 +3,314 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Q e-Book — Edição Definitiva 2025</title>
+<title>Q e-Book — Universidade Completa | Área de Membros</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/plus-jakarta-sans@5.0.18/index.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@5.0.18/index.min.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
   * { font-family: 'Plus Jakarta Sans', sans-serif; }
   h1, h2, h3, .display { font-family: 'Fraunces', serif; letter-spacing: -0.02em; }
-  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar { width: 8px; }
   ::-webkit-scrollbar-thumb { background: #4f46e5; border-radius: 999px; }
   .gradient-text { background: linear-gradient(to right, #c4b5fd, #a5b4fc); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .glow-violet { box-shadow: 0 20px 50px -12px rgba(124,58,237,0.3); }
-  .glow-violet-hover:hover { box-shadow: 0 20px 50px -12px rgba(124,58,237,0.4); }
-  .module-btn.active { background: white; color: #0B1B33; }
-  .module-btn:not(.active) { color: rgba(255,255,255,0.8); }
-  .module-btn:not(.active):hover { background: rgba(255,255,255,0.06); }
+  .module-content { display: none; }
+  .module-content.active { display: block; animation: fadeIn 0.5s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .chat-bubble { animation: slideIn 0.3s ease; }
+  @keyframes slideIn { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: translateX(0); } }
   pre { white-space: pre-wrap; word-break: break-word; }
-  @keyframes pulse-dot { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
-  .pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
-  .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-  .accordion-content.open { max-height: 500px; }
-  .copy-toast { animation: slideUp 0.3s ease; }
-  @keyframes slideUp { from { transform: translateY(10px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  .checklist-item input:checked + label { text-decoration: line-through; opacity: 0.6; }
+  .video-placeholder { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
+  .image-placeholder { background: linear-gradient(135deg, #334155 0%, #1e293b 100%); display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 14px; }
 </style>
 </head>
-<body class="bg-[#0B1B33] text-white selection:bg-violet-500/30">
+<body class="bg-[#0B1B33] text-white min-h-screen">
 
 <!-- HEADER -->
-<header class="sticky top-0 z-50 backdrop-blur-xl bg-[#0B1B33]/80 border-b border-white/10">
-  <div class="max-w-[1280px] mx-auto px-6 lg:px-8 h-[72px] flex items-center justify-between">
+<header class="sticky top-0 z-50 backdrop-blur-xl bg-[#0B1B33]/90 border-b border-white/10">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-8 h-[72px] flex items-center justify-between">
     <div class="flex items-center gap-3">
-      <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-violet-500/20 relative">
-        <span class="font-black text-[22px] tracking-tight">Q</span>
+      <div class="relative">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-violet-500/30">
+          <span class="font-black text-[22px]">Q</span>
+        </div>
         <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-3 h-3 bg-indigo-600 rotate-45"></div>
       </div>
       <div class="leading-none">
-        <div class="font-extrabold text-[18px] tracking-tight">Q e-Book</div>
-        <div class="text-[11px] tracking-[0.18em] uppercase text-white/60 font-semibold">seu e-Book em minutos</div>
+        <div class="font-extrabold text-[18px]">Q e-Book</div>
+        <div class="text-[11px] tracking-[0.18em] uppercase text-white/60 font-semibold">Área de Membros</div>
       </div>
-      <span class="hidden md:inline-flex ml-4 px-3 py-1 rounded-full bg-white/[0.08] border border-white/10 text-[11px] tracking-widest uppercase">Edição Definitiva • 2025</span>
     </div>
-    <div class="flex items-center gap-3">
-      <div class="hidden lg:flex items-center gap-2 text-[13px] text-white/60">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        1.847 alunos • 4.9/5
+    <div class="flex items-center gap-4">
+      <div class="hidden md:flex items-center gap-2">
+        <div class="text-[12px] text-white/60">Progresso:</div>
+        <div class="w-32 h-2 bg-white/10 rounded-full overflow-hidden">
+          <div id="progressBar" class="h-full bg-gradient-to-r from-violet-500 to-indigo-600 transition-all duration-500" style="width: 0%"></div>
+        </div>
+        <div id="progressText" class="text-[12px] font-bold text-violet-300">0%</div>
       </div>
-      <a href="#comecar" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-violet-500 to-indigo-600 font-bold text-sm shadow-lg shadow-violet-600/30 hover:shadow-violet-600/40 transition">Começar agora</a>
+      <div class="flex items-center gap-2 text-[13px] text-white/60">
+        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 grid place-items-center font-bold text-sm">A</div>
+        <span class="hidden sm:inline">Aluno</span>
+      </div>
     </div>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="relative overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-b from-violet-600/20 via-transparent to-transparent pointer-events-none"></div>
-  <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[1200px] h-[600px] bg-gradient-to-r from-violet-600/30 to-indigo-600/30 blur-[120px] rounded-full pointer-events-none"></div>
-  <div class="max-w-[1280px] mx-auto px-6 lg:px-8 pt-16 lg:pt-24 pb-14 relative">
-    <div class="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 items-start">
-      <div>
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-300/20 text-amber-200 text-xs font-semibold tracking-wide mb-6">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
-          Tributo • Legado de um empreendedor de 55 anos
-        </div>
-        <h1 class="display text-[40px] lg:text-[64px] leading-[0.95] font-bold">
-          Do Zero ao<br>
-          <span class="gradient-text">Profissional</span><br>
-          em 7 Dias<br>
-          <span class="text-[28px] lg:text-[32px] font-medium text-white/70 leading-none block mt-4 tracking-tight">Sem Depender de Guru Caro</span>
-        </h1>
-        <p class="mt-6 text-[18px] lg:text-[20px] leading-8 text-white/70 max-w-[62ch]">
-          A universidade completa que eu gostaria de ter recebido. Sem enrolação, sem assinatura, sem amarração. Você aprende Business Manager, WhatsApp Cloud API, Pixel, CAPI e escala com <span class="text-white font-semibold">código pronto</span> e <span class="text-white font-semibold">Mentor IA Q dentro de cada aula</span> te guiando 24h.
-        </p>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a href="#modulos" class="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-white text-[#0B1B33] font-extrabold text-[15px] hover:bg-white/90 transition">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#0B1B33" stroke="none"><polygon points="6 3 20 12 6 21 6 3"/></svg>
-            Assistir aula 01 grátis
-          </a>
-          <a href="#comecar" class="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-gradient-to-r from-violet-500 to-indigo-600 font-bold text-[15px] shadow-xl shadow-violet-600/30">
-            Começar agora e vender amanhã
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
-        </div>
-        <div class="mt-8 grid grid-cols-3 gap-4 max-w-[520px]">
-          <div class="rounded-2xl bg-white/[0.06] border border-white/10 p-4">
-            <div class="font-extrabold text-[18px]">7 módulos</div>
-            <div class="text-[13px] text-white/60">com código</div>
-          </div>
-          <div class="rounded-2xl bg-white/[0.06] border border-white/10 p-4">
-            <div class="font-extrabold text-[18px]">24h</div>
-            <div class="text-[13px] text-white/60">Mentor IA Q</div>
-          </div>
-          <div class="rounded-2xl bg-white/[0.06] border border-white/10 p-4">
-            <div class="font-extrabold text-[18px]">R$0</div>
-            <div class="text-[13px] text-white/60">em gurus depois</div>
-          </div>
-        </div>
-        <div class="mt-6 flex items-center gap-3 text-sm text-white/60">
-          <div class="flex -space-x-2">
-            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-violet-400 to-indigo-600 border-2 border-[#0B1B33] grid place-items-center font-bold text-xs">B</div>
-            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-violet-400 to-indigo-600 border-2 border-[#0B1B33] grid place-items-center font-bold text-xs">C</div>
-            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-violet-400 to-indigo-600 border-2 border-[#0B1B33] grid place-items-center font-bold text-xs">D</div>
-          </div>
-          <span>Feito para quem tem pouco tempo e quer deixar um legado vendendo conhecimento honesto.</span>
-        </div>
-      </div>
-
-      <div class="relative lg:sticky lg:top-[96px]">
-        <div class="rounded-[28px] bg-gradient-to-b from-white/[0.08] to-white/[0.03] border border-white/10 p-3 shadow-2xl shadow-black/40">
-          <div class="rounded-[20px] overflow-hidden bg-[#0E223F] border border-white/10">
-            <div class="aspect-[16/10] relative bg-gradient-to-br from-[#162C52] to-[#0B1B33] p-6 flex flex-col">
-              <div class="flex items-center justify-between text-[12px] tracking-widest uppercase text-white/50">
-                <span class="flex items-center gap-2"><span class="w-2 h-2 bg-emerald-400 rounded-full pulse-dot"></span> AO VIVO COM IA</span>
-                <span>M01 • 47:12</span>
-              </div>
-              <div class="mt-6 flex-1 grid place-items-center">
-                <div class="w-[86px] h-[86px] rounded-full bg-white text-[#0B1B33] grid place-items-center shadow-xl">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#0B1B33" stroke="none"><polygon points="6 3 20 12 6 21 6 3"/></svg>
-                </div>
-              </div>
-              <div class="mt-auto rounded-2xl bg-[#0B1B33]/80 backdrop-blur border border-white/10 p-4 flex gap-3">
-                <div class="w-9 h-9 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 grid place-items-center font-black">Q</div>
-                <div class="text-[13px] leading-5">
-                  <div class="font-bold">Mentor IA Q</div>
-                  <div class="text-white/70">"Clique no código Cloudflare ao lado e eu coloco seu VERIFY_TOKEN automaticamente, SEU_DOMINIO pronto."</div>
-                </div>
-              </div>
-            </div>
-            <div class="p-5">
-              <div class="flex items-center gap-2 text-xs text-white/60 mb-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
-                Módulo 01 de 07 • Progresso 12%
-              </div>
-              <div class="h-2 rounded-full bg-white/10 overflow-hidden">
-                <div class="h-full w-[12%] bg-gradient-to-r from-violet-500 to-indigo-600"></div>
-              </div>
-              <div class="mt-4 grid grid-cols-2 gap-3">
-                <div class="rounded-xl bg-white/[0.06] border border-white/10 p-3 text-[12px]">
-                  <div class="font-bold flex items-center gap-1.5">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-400"><path d="M20 6 9 17l-5-5"/></svg>
-                    Checklist
-                  </div>
-                  <div class="text-white/60 mt-1">BM blindado em 4 passos</div>
-                </div>
-                <div class="rounded-xl bg-white/[0.06] border border-white/10 p-3 text-[12px]">
-                  <div class="font-bold flex items-center gap-1.5">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-violet-300"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
-                    Código
-                  </div>
-                  <div class="text-white/60 mt-1">Pronto pra colar</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mt-4 rounded-2xl bg-amber-400 text-[#0B1B33] p-4 flex gap-3">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-          <div class="text-[13px] leading-6 font-medium">Promessa honesta: você termina o Módulo 02 com WhatsApp Cloud API funcionando e mandando mensagem de teste para seu próprio número. Sem isso, não avançamos.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DEDICATÓRIA -->
-<section class="max-w-[1280px] mx-auto px-6 lg:px-8 py-12 lg:py-16">
-  <div class="rounded-[32px] bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/10 p-8 lg:p-12 relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-[420px] h-[420px] bg-gradient-to-br from-violet-600/20 to-indigo-600/20 blur-[80px] rounded-full"></div>
-    <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 relative">
-      <div>
-        <div class="inline-flex items-center gap-2 text-[12px] tracking-[0.2em] uppercase text-violet-300 font-bold">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
-          Dedicatória — Edição Definitiva
-        </div>
-        <h2 class="display text-[32px] lg:text-[44px] leading-[1.05] mt-4">Este curso existe porque alguém decidiu não levar o conhecimento embora.</h2>
-        <div class="mt-6 space-y-5 text-[17px] leading-8 text-white/75">
-          <p>Meu amigo, 55 anos, empreendedor, com uma generosidade que poucos têm, me disse: <em class="text-white">"Me ajude a deixar algo que ajude de verdade, sem amarrar ninguém em guru caro."</em></p>
-          <p>Ele não queria mais um curso. Queria uma universidade portátil: do Business Manager ao PIX da Meta, com código pronto, sem segredos, com um mentor dentro da aula que responde na hora.</p>
-          <p>Então esta edição é dele. E é sua. Cada módulo tem o que funciona hoje, com placeholders <code class="px-2 py-1 rounded bg-white/10">SEU_DOMINIO</code> e <code class="px-2 py-1 rounded bg-white/10">SEU_TOKEN</code> para você só trocar e usar. Nada de teoria infinita.</p>
-        </div>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <span class="px-4 py-2 rounded-full bg-white text-[#0B1B33] font-bold text-sm">Acessível • Fonte grande • Alto contraste</span>
-          <span class="px-4 py-2 rounded-full bg-white/10 border border-white/15 text-sm">Linguagem clara • Passo a passo com prints descritos</span>
-        </div>
-      </div>
-      <div class="rounded-[24px] bg-[#0E223F] border border-white/10 p-6 lg:p-8">
-        <div class="font-bold tracking-wide text-[12px] uppercase text-white/50 mb-4">O que torna esta edição definitiva</div>
-        <ul class="space-y-4">
-          <li class="flex gap-3 text-[15px] leading-6">
-            <span class="mt-1 w-6 h-6 rounded-full bg-emerald-500/15 text-emerald-300 grid place-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-            <span class="text-white/80">Nenhum vídeo com mais de 85 min. Respeito ao seu tempo.</span>
-          </li>
-          <li class="flex gap-3 text-[15px] leading-6">
-            <span class="mt-1 w-6 h-6 rounded-full bg-emerald-500/15 text-emerald-300 grid place-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-            <span class="text-white/80">Todo módulo tem: Vídeo + Checklist + Template + Código pronto</span>
-          </li>
-          <li class="flex gap-3 text-[15px] leading-6">
-            <span class="mt-1 w-6 h-6 rounded-full bg-emerald-500/15 text-emerald-300 grid place-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-            <span class="text-white/80">Mentor IA Q dentro da aula: tira dúvida do trecho exato que você está vendo</span>
-          </li>
-          <li class="flex gap-3 text-[15px] leading-6">
-            <span class="mt-1 w-6 h-6 rounded-full bg-emerald-500/15 text-emerald-300 grid place-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-            <span class="text-white/80">Tabela de preços para cobrar R$497 / R$997 / R$1997 pronta para enviar no Zap</span>
-          </li>
-          <li class="flex gap-3 text-[15px] leading-6">
-            <span class="mt-1 w-6 h-6 rounded-full bg-emerald-500/15 text-emerald-300 grid place-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-            <span class="text-white/80">Sem mensalidade, sem pegadinha, sem 'módulo bônus secreto depois'</span>
-          </li>
-        </ul>
-        <div class="mt-8 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 p-4 flex items-center justify-between">
-          <div class="text-sm leading-5">
-            <div class="font-extrabold">Valor real percebido</div>
-            <div class="text-white/80">Produto pronto para vender por R$997</div>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MÓDULOS -->
-<section id="modulos" class="max-w-[1280px] mx-auto px-6 lg:px-8 py-6 lg:py-10">
-  <div class="flex flex-wrap items-end justify-between gap-6 mb-8">
-    <div>
-      <div class="text-[12px] tracking-[0.2em] uppercase text-violet-300 font-bold">Universidade Completa • 7 Módulos</div>
-      <h2 class="display text-[36px] lg:text-[48px] leading-[0.95] mt-3">Tudo que você precisa, na ordem que funciona</h2>
-    </div>
-    <div class="text-[14px] text-white/60 flex items-center gap-2">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      7h 18min totais • Atualizado Jun/2025 • Legendas grandes
-    </div>
-  </div>
+<!-- MAIN CONTENT -->
+<main class="max-w-[1400px] mx-auto px-6 lg:px-8 py-8">
   <div class="grid lg:grid-cols-[320px_1fr] gap-6">
-    <div id="moduleList" class="rounded-[20px] bg-white/[0.04] border border-white/10 p-2"></div>
-    <div id="moduleContent" class="rounded-[24px] bg-[#0E223F] border border-white/10 overflow-hidden"></div>
-  </div>
-</section>
-
-<!-- PREÇOS / CONTRATO -->
-<section class="max-w-[1280px] mx-auto px-6 lg:px-8 py-10">
-  <div class="rounded-[28px] bg-gradient-to-br from-white to-zinc-100 text-[#0B1B33] p-8 lg:p-10 border border-black/5 shadow-2xl">
-    <div class="flex flex-wrap items-center justify-between gap-4">
-      <div>
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0B1B33] text-white text-[11px] tracking-widest uppercase font-bold">Bônus • Pronto pra cobrar</div>
-        <h2 class="display text-[32px] lg:text-[42px] leading-[0.95] mt-3">Tabela de preços, script de Zap e contrato simples</h2>
-        <p class="mt-3 text-[15px] leading-6 text-[#0B1B33]/70 max-w-[60ch]">Você não precisa inventar preço. Use a tabela validada, copie o script de vendas e envie o contrato de 1 página. É o que meus alunos usam para fechar no mesmo dia.</p>
+    
+    <!-- SIDEBAR - NAVEGAÇÃO -->
+    <aside class="lg:sticky lg:top-[96px] lg:h-[calc(100vh-120px)] overflow-y-auto">
+      <div class="rounded-[20px] bg-white/[0.04] border border-white/10 p-4 space-y-2">
+        <div class="text-[11px] tracking-[0.2em] uppercase text-violet-300 font-bold mb-4 px-2">Módulos do Curso</div>
+        <div id="moduleList"></div>
       </div>
-      <div class="flex items-center gap-2 text-[12px] font-bold">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
-        Sem juridiquês • Acessível • Em PT-BR claro
-      </div>
-    </div>
-    <div class="mt-8 grid lg:grid-cols-3 gap-5" id="priceCards"></div>
-    <div class="mt-8 grid lg:grid-cols-[1.2fr_0.8fr] gap-6">
-      <div class="rounded-[18px] bg-[#0B1B33] text-white p-6">
-        <div class="font-bold flex items-center gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-300"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-          Script de vendas WhatsApp (copiar e colar)
+      
+      <!-- BOX DE SUPORTE -->
+      <div class="mt-4 rounded-[20px] bg-gradient-to-br from-violet-600/20 to-indigo-600/20 border border-violet-500/30 p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-8 h-8 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 grid place-items-center font-black text-sm">Q</div>
+          <div>
+            <div class="font-bold text-sm">Mentor IA Q</div>
+            <div class="text-[11px] text-emerald-400 flex items-center gap-1">
+              <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+              Online 24h
+            </div>
+          </div>
         </div>
-        <pre class="mt-4 text-[13px] leading-6 bg-white/5 border border-white/10 rounded-xl p-4">Oi [NOME]! Vi que você quer vender no WhatsApp sem depender de plataforma cara.
-Eu instalo em 2 dias:
-✅ Business Manager blindado + domínio verificado
-✅ WhatsApp Cloud API com seu número (sem chip)
-✅ Pixel + CAPI + Catálogo de e-book
-✅ 1 campanha Advantage+ pra já trazer cliente
-✅ Planilha que mostra de onde veio cada venda
-Investimento: [R$497 / R$997 / R$1.997] — você escolhe o pacote.
-Forma: PIX em 2x ou cartão.
-Prazo: 2 dias úteis pra ficar no ar.
-Posso te mandar um áudio de 30s mostrando como fica por dentro?
-Se fizer sentido, já reservo sua vaga hoje e te entrego amanhã.</pre>
-        <button onclick="copyText('script')" class="mt-3 px-4 py-2 rounded-full bg-white text-[#0B1B33] font-bold text-xs flex items-center gap-1.5">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-          <span id="btn-script">Copiar script</span>
+        <p class="text-[12px] text-white/70 leading-5">Travou em algo? Clique no chat abaixo e eu te ajudo na hora!</p>
+      </div>
+    </aside>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="min-h-[600px]">
+      
+      <!-- WELCOME SCREEN -->
+      <div id="welcome" class="module-content active">
+        <div class="rounded-[32px] bg-gradient-to-br from-violet-600/20 to-indigo-600/20 border border-violet-500/30 p-8 lg:p-12 relative overflow-hidden">
+          <div class="absolute -top-24 -right-24 w-[400px] h-[400px] bg-gradient-to-br from-violet-600/30 to-indigo-600/30 blur-[100px] rounded-full"></div>
+          <div class="relative">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-400/10 border border-amber-300/30 text-amber-200 text-xs font-bold tracking-wide mb-6">
+              <span class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span>
+              BEM-VINDO À SUA ÁREA DE MEMBROS
+            </div>
+            <h1 class="display text-[40px] lg:text-[56px] leading-[0.95] font-bold mb-6">
+              Parabéns! Você está<br>
+              <span class="gradient-text">dentro da Universidade Q</span>
+            </h1>
+            <p class="text-[18px] lg:text-[20px] leading-8 text-white/80 max-w-[700px] mb-8">
+              Em 7 dias, você vai do zero ao profissional completo. Business Manager, WhatsApp Cloud API, Pixel, CAPI, anúncios e escala — tudo com código pronto e eu (Mentor IA Q) te guiando em cada passo.
+            </p>
+            
+            <!-- BOX DE INSTRUÇÕES -->
+            <div class="rounded-2xl bg-white/[0.06] border border-white/10 p-6 mb-8">
+              <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-violet-300"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                Como usar esta plataforma:
+              </h3>
+              <div class="space-y-3 text-[14px] text-white/80">
+                <div class="flex gap-3">
+                  <span class="w-6 h-6 rounded-full bg-violet-500/20 text-violet-300 grid place-items-center font-bold text-xs shrink-0">1</span>
+                  <span>Comece pelo <strong>Módulo 01</strong> e siga a ordem (cada módulo prepara o próximo)</span>
+                </div>
+                <div class="flex gap-3">
+                  <span class="w-6 h-6 rounded-full bg-violet-500/20 text-violet-300 grid place-items-center font-bold text-xs shrink-0">2</span>
+                  <span>Assista a vídeo-aula e <strong>copie o código</strong> quando aparecer</span>
+                </div>
+                <div class="flex gap-3">
+                  <span class="w-6 h-6 rounded-full bg-violet-500/20 text-violet-300 grid place-items-center font-bold text-xs shrink-0">3</span>
+                  <span>Marque os <strong>checklists</strong> conforme for fazendo</span>
+                </div>
+                <div class="flex gap-3">
+                  <span class="w-6 h-6 rounded-full bg-violet-500/20 text-violet-300 grid place-items-center font-bold text-xs shrink-0">4</span>
+                  <span>Travou? <strong>Clique no chat</strong> no canto inferior direito</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-4 mb-8">
+              <div class="rounded-2xl bg-white/[0.06] border border-white/10 p-5">
+                <div class="text-[32px] font-black gradient-text mb-2">7</div>
+                <div class="text-[14px] text-white/70">Módulos completos</div>
+              </div>
+              <div class="rounded-2xl bg-white/[0.06] border border-white/10 p-5">
+                <div class="text-[32px] font-black gradient-text mb-2">7h18</div>
+                <div class="text-[14px] text-white/70">De conteúdo</div>
+              </div>
+              <div class="rounded-2xl bg-white/[0.06] border border-white/10 p-5">
+                <div class="text-[32px] font-black gradient-text mb-2">24h</div>
+                <div class="text-[14px] text-white/70">Mentor IA Q</div>
+              </div>
+            </div>
+
+            <button onclick="startModule(1)" class="px-8 py-4 rounded-full bg-gradient-to-r from-violet-500 to-indigo-600 font-extrabold text-[16px] shadow-xl shadow-violet-600/40 hover:shadow-violet-600/60 transition flex items-center gap-2">
+              Começar Módulo 01
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- MÓDULOS -->
+      <div id="modules"></div>
+    </div>
+  </div>
+</main>
+
+<!-- CHAT MENTOR IA -->
+<div id="chatContainer" class="fixed bottom-6 right-6 z-50">
+  <div id="chatWindow" class="hidden w-[380px] h-[500px] bg-[#0E223F] border border-white/10 rounded-[20px] shadow-2xl flex flex-col overflow-hidden">
+    <div class="bg-gradient-to-r from-violet-600 to-indigo-600 p-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-white text-[#4F46E5] grid place-items-center font-black">Q</div>
+        <div>
+          <div class="font-bold">Mentor IA Q</div>
+          <div class="text-[11px] text-white/80 flex items-center gap-1">
+            <span class="w-2 h-2 bg-emerald-400 rounded-full"></span>
+            Online agora
+          </div>
+        </div>
+      </div>
+      <button onclick="toggleChat()" class="text-white/80 hover:text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </div>
+    <div id="chatMessages" class="flex-1 overflow-y-auto p-4 space-y-3"></div>
+    <div class="p-4 border-t border-white/10">
+      <div class="flex gap-2">
+        <input id="chatInput" type="text" placeholder="Pergunte sobre este módulo..." class="flex-1 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm focus:outline-none focus:border-violet-500" onkeypress="if(event.key==='Enter')sendMessage()">
+        <button onclick="sendMessage()" class="px-4 py-2 rounded-full bg-violet-600 hover:bg-violet-700 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
         </button>
       </div>
-      <div class="rounded-[18px] bg-white border border-black/10 p-6">
-        <div class="font-bold flex items-center gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
-          Contrato simples — 1 página
-        </div>
-        <div class="mt-3 text-[12px] leading-6 text-black/70">
-          <p class="font-bold">CONTRATO DE PRESTAÇÃO — Q e-Book</p>
-          <p class="mt-2">Contratante: [NOME / CNPJ] — Contratado: [SEU NOME / SEU CNPJ]</p>
-          <p>Objeto: Instalação BM + WhatsApp Cloud API + Pixel + CAPI + 1 campanha Advantage+.</p>
-          <p>Prazo: 2 dias úteis após envio de acessos (BM, domínio SEU_DOMINIO, número).</p>
-          <p>Valor: R$ [VALOR] via PIX [SUA CHAVE PIX] em [X] parcelas.</p>
-          <p>Suporte: 7/30 dias via WhatsApp para dúvidas da instalação. Não inclui gestão mensal.</p>
-          <p>Garantia: Se API não enviar mensagem de teste, reembolso integral em 7 dias.</p>
-          <p class="mt-2">Assinaturas: ___________________ &nbsp; ___________________</p>
-        </div>
-      </div>
     </div>
   </div>
-</section>
-
-<!-- MENTOR IA Q -->
-<section class="max-w-[1280px] mx-auto px-6 lg:px-8 py-10">
-  <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-8 items-start">
-    <div class="rounded-[24px] bg-gradient-to-br from-violet-600 to-indigo-700 p-8 text-white relative overflow-hidden">
-      <div class="absolute -top-24 -right-24 w-[300px] h-[300px] bg-white/10 blur-[40px] rounded-full"></div>
-      <div class="relative">
-        <div class="w-14 h-14 rounded-2xl bg-white text-[#4F46E5] grid place-items-center font-black text-[26px] shadow-lg">Q</div>
-        <h3 class="display text-[32px] leading-[0.95] mt-5">Seu Mentor IA Q vive dentro da aula</h3>
-        <p class="mt-4 text-[15px] leading-7 text-white/85">Ele não é um chatbot solto. Ele assiste com você. Quando você pausa no minuto 23 do Módulo 2, ele já sabe que você travou no VERIFY_TOKEN e te mostra exatamente onde colar.</p>
-        <div class="mt-6 space-y-3">
-          <div class="flex gap-2 text-[14px]"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Explica com fonte grande, sem jargão</div>
-          <div class="flex gap-2 text-[14px]"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Gera seu token seguro e testa na hora</div>
-          <div class="flex gap-2 text-[14px]"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Mostra print ampliado quando você pede 'mostrar maior'</div>
-          <div class="flex gap-2 text-[14px]"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Disponível 24h, sem custo extra, dentro do player</div>
-        </div>
-        <div class="mt-8 rounded-xl bg-black/20 border border-white/15 p-4 text-[13px] flex gap-3">
-          <span class="w-8 h-8 rounded-full bg-white text-[#4F46E5] grid place-items-center font-black">Q</span>
-          <div>"Seu domínio é SEU_DOMINIO.com.br? Já configurei seu meta-tag e seu webhook. Quer testar o envio agora?"</div>
-        </div>
-      </div>
-    </div>
-    <div class="rounded-[24px] bg-white/[0.04] border border-white/10 p-6">
-      <div class="font-bold tracking-[0.18em] uppercase text-[11px] text-white/50">Como funciona na prática</div>
-      <div class="mt-4 grid gap-4">
-        <div class="rounded-xl bg-[#0E223F] border border-white/10 p-5 flex gap-4">
-          <div class="w-10 h-10 rounded-xl bg-white/[0.08] grid place-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 20 12 6 21 6 3"/></svg></div>
-          <div>
-            <div class="font-bold">Dentro do vídeo</div>
-            <div class="text-[13px] leading-6 text-white/65 mt-1">Você clica 'Perguntar ao Q' e ele responde sobre aquele segundo exato do vídeo, com código e print grande.</div>
-          </div>
-        </div>
-        <div class="rounded-xl bg-[#0E223F] border border-white/10 p-5 flex gap-4">
-          <div class="w-10 h-10 rounded-xl bg-white/[0.08] grid place-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></div>
-          <div>
-            <div class="font-bold">No Zap</div>
-            <div class="text-[13px] leading-6 text-white/65 mt-1">Se preferir, o mesmo Q te atende no WhatsApp Cloud API que você acabou de instalar. Mesma memória.</div>
-          </div>
-        </div>
-        <div class="rounded-xl bg-[#0E223F] border border-white/10 p-5 flex gap-4">
-          <div class="w-10 h-10 rounded-xl bg-white/[0.08] grid place-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg></div>
-          <div>
-            <div class="font-bold">Modo Acessível</div>
-            <div class="text-[13px] leading-6 text-white/65 mt-1">Fonte grande, alto contraste, velocidade 0.8x, transcrição completa. Feito para quem tem 55+ e quer clareza.</div>
-          </div>
-        </div>
-      </div>
-      <div class="mt-6 rounded-xl bg-emerald-500/10 border border-emerald-400/20 p-4 text-[13px] leading-6 text-emerald-100">💜 Promessa de legado: o Q nunca vai te empurrar upsell. Ele só existe para você terminar e vender amanhã. Se não conseguir, ele te mostra onde está o erro, sem enrolar.</div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="max-w-[960px] mx-auto px-6 lg:px-8 py-10">
-  <h3 class="display text-[28px] text-center">Perguntas honestas, respostas diretas</h3>
-  <div class="mt-8 rounded-[20px] bg-white/[0.04] border border-white/10 divide-y divide-white/10" id="faqList"></div>
-</section>
-
-<!-- CTA FINAL -->
-<section id="comecar" class="max-w-[1280px] mx-auto px-6 lg:px-8 pb-16 pt-4">
-  <div class="rounded-[32px] bg-gradient-to-br from-white to-zinc-50 text-[#0B1B33] p-8 lg:p-12 relative overflow-hidden shadow-2xl">
-    <div class="absolute -top-24 -right-24 w-[420px] h-[420px] bg-gradient-to-br from-violet-500/20 to-indigo-600/20 blur-[60px] rounded-full"></div>
-    <div class="grid lg:grid-cols-[1.2fr_0.8fr] gap-8 items-center relative">
-      <div>
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0B1B33] text-white text-[11px] font-bold tracking-widest uppercase">Edição Definitiva • Pronta pra vender</div>
-        <h2 class="display text-[36px] lg:text-[52px] leading-[0.9] mt-4">Começar Agora<br>e Vender Amanhã</h2>
-        <p class="mt-4 text-[17px] leading-7 text-black/70">Você recebe hoje: 7 módulos completos, código Cloudflare, templates, tabela de preços, script e contrato. Mentor IA Q dentro de cada aula. Sem mensalidade. Sem guru te amarrando.</p>
-        <div class="mt-8 flex flex-wrap gap-3">
-          <a href="#" class="px-8 py-4 rounded-full bg-[#0B1B33] text-white font-extrabold flex items-center gap-2 shadow-xl">Garantir acesso por R$997 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-          <div class="px-5 py-3 rounded-full bg-black/5 text-[13px] font-semibold flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg> Acesso imediato • Garantia 7 dias • Nota fiscal</div>
-        </div>
-        <div class="mt-6 flex items-center gap-3 text-[12px] text-black/60">
-          <div class="flex -space-x-2">
-            <div class="w-7 h-7 rounded-full bg-[#0B1B33] text-white grid place-items-center text-[10px] font-bold border-2 border-white">1</div>
-            <div class="w-7 h-7 rounded-full bg-[#0B1B33] text-white grid place-items-center text-[10px] font-bold border-2 border-white">2</div>
-            <div class="w-7 h-7 rounded-full bg-[#0B1B33] text-white grid place-items-center text-[10px] font-bold border-2 border-white">3</div>
-            <div class="w-7 h-7 rounded-full bg-[#0B1B33] text-white grid place-items-center text-[10px] font-bold border-2 border-white">4</div>
-          </div>
-          <span>1.847 alunos já instalaram e estão vendendo com WhatsApp Cloud API</span>
-        </div>
-      </div>
-      <div class="rounded-[20px] bg-[#0B1B33] text-white p-6">
-        <div class="font-bold text-[13px] uppercase tracking-widest text-white/50">O que você leva hoje</div>
-        <ul class="mt-4 space-y-3 text-[14px]">
-          <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-300 mt-0.5"><path d="M20 6 9 17l-5-5"/></svg>7 módulos (7h18) com código pronto</li>
-          <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-300 mt-0.5"><path d="M20 6 9 17l-5-5"/></svg>Webhook Cloudflare + CAPI + Pixel</li>
-          <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-300 mt-0.5"><path d="M20 6 9 17l-5-5"/></svg>Mentor IA Q 24h dentro da aula + Zap</li>
-          <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-300 mt-0.5"><path d="M20 6 9 17l-5-5"/></svg>Tabela R$497 / R$997 / R$1.997</li>
-          <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-300 mt-0.5"><path d="M20 6 9 17l-5-5"/></svg>Script de vendas + Contrato 1 página</li>
-          <li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-300 mt-0.5"><path d="M20 6 9 17l-5-5"/></svg>Checklists, templates, planilha ROAS</li>
-        </ul>
-        <div class="mt-6 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 p-4 flex items-center justify-between">
-          <div>
-            <div class="text-[12px] text-white/70 line-through">De R$2.497</div>
-            <div class="font-black text-[22px]">Por R$997 à vista</div>
-            <div class="text-[11px] text-white/70">ou 12x de R$97</div>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-80"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
-        </div>
-        <div class="mt-3 text-[11px] text-white/50 text-center">Feito com propósito • Q e-Book — seu e-Book em minutos</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="border-t border-white/10 py-10">
-  <div class="max-w-[1280px] mx-auto px-6 lg:px-8 flex flex-wrap items-center justify-between gap-6 text-[13px] text-white/60">
-    <div class="flex items-center gap-3">
-      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-indigo-600 grid place-items-center font-black text-white">Q</div>
-      <div><span class="font-bold text-white">Q e-Book</span> — seu e-Book em minutos — Feito com propósito • Edição Definitiva Tributo 2025</div>
-    </div>
-    <div class="flex items-center gap-4">
-      <a href="#" class="hover:text-white flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>SEU_DOMINIO.com.br/privacidade</a>
-      <a href="#" class="hover:text-white flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>SEU_DOMINIO.com.br/termos</a>
-    </div>
-  </div>
-  <div class="max-w-[1280px] mx-auto px-6 lg:px-8 mt-6 text-[11px] leading-5 text-white/35">Este material é educacional e não promete renda garantida. Resultados dependem de execução. Tokens, IDs e domínios são placeholders (SEU_DOMINIO, SEU_TOKEN). Nunca exponha segredos no frontend. Use variáveis de ambiente na Cloudflare. Feito para honrar o sonho de um empreendedor de 55 anos que quer deixar legado ajudando outros a escapar de gurus caros. Com carinho, Q e-Book.</div>
-</footer>
-
-<!-- TOAST -->
-<div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-emerald-500 text-white px-5 py-3 rounded-full shadow-xl hidden z-50 flex items-center gap-2">
-  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-  <span id="toastMsg">Copiado!</span>
+  <button onclick="toggleChat()" class="w-14 h-14 rounded-full bg-gradient-to-r from-violet-500 to-indigo-600 shadow-xl shadow-violet-600/40 hover:scale-105 transition flex items-center justify-center">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  </button>
 </div>
 
 <script>
-const modules = [
+// DADOS DOS MÓDULOS (com placeholders para imagens e vídeos)
+const modulesData = [
   {
-    id: 1, title: "Business Manager do Zero", subtitle: "Sua base blindada, sem risco de bloqueio", time: "47 min",
+    id: 1,
+    title: "Business Manager do Zero",
+    subtitle: "Sua base blindada, sem risco de bloqueio",
+    time: "47 min",
     color: "from-violet-500 to-indigo-600",
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>',
-    lessons: ["Criar BM, Conta de Anúncios e verificar domínio SEU_DOMINIO.com.br", "Adicionar 2 administradores + autenticação de 2 fatores (anti-bloqueio)", "Vincular Instagram e WhatsApp Business ao BM corretamente"],
-    prints: ["Print 01: business.facebook.com → Criar Empresa → Nome: Q e-Book [SUA EMPRESA]", "Print 02: Configurações do Negócio → Segurança → Adicionar pessoa com e-mail secundário", "Print 03: Domínios → Adicionar → SEU_DOMINIO.com.br → Verificação via meta-tag"],
-    checklist: ["BM criado", "Domínio verificado", "2 fatores ativos", "Forma de pagamento adicionada em teste"],
-    template: "Checklist BM Blindado (PDF) + Modelo de organização de ativos (Planilha)",
-    code: `// Verificação de domínio - cole no <head> do seu site SEU_DOMINIO
-<meta name="facebook-domain-verification" content="SEU_CODIGO_DE_VERIFICACAO" />
-// Organização recomendada:
-// BM: Q e-Book Oficial
-//  └─ Conta Anúncios 01: Q e-Book - Aquisição
-//  └─ Conta Anúncios 02: Q e-Book - Remarketing (reserva)
-//  ─ Pixel: pixel_qebook_principal`
+    icon: "️",
+    videoUrl: "https://www.youtube.com/embed/SEU_VIDEO_ID_1", // Substitua pelo ID do seu vídeo
+    lessons: [
+      { 
+        title: "Criando seu Business Manager", 
+        content: "Acesse business.facebook.com e clique em 'Criar Empresa'. Use o nome oficial da sua empresa (ou seu nome se for MEI). Este será o 'cofre' de todos os seus ativos digitais.",
+        image: "print-bm-criar.png", // Substitua pelo nome do seu arquivo de imagem
+        code: null 
+      },
+      { 
+        title: "Verificando seu domínio", 
+        content: "Vá em Configurações do Negócio → Domínios → Adicionar Domínio. Cole seu domínio (ex: qebook.com.br) e escolha verificação via meta-tag.",
+        image: "print-verificar-dominio.png",
+        code: '<meta name="facebook-domain-verification" content="SEU_CODIGO_AQUI" />' 
+      },
+      { 
+        title: "Adicionando administradores com segurança", 
+        content: "Adicione no máximo 2 administradores. Ative autenticação de 2 fatores em todos. Isso reduz 90% o risco de bloqueio.",
+        image: "print-2fatores.png",
+        code: null 
+      },
+      { 
+        title: "Vinculando Instagram e WhatsApp", 
+        content: "Em Configurações → Contas → Instagram e WhatsApp Business. Vincule ambos ao BM para ter controle total.",
+        image: "print-vincular-contas.png",
+        code: null 
+      }
+    ],
+    checklist: ["BM criado com nome oficial", "Domínio verificado via meta-tag", "2 fatores ativos em todos admins", "Instagram vinculado", "WhatsApp Business vinculado", "Forma de pagamento adicionada"],
+    mentorTips: [
+      "💡 Dica: Use sempre e-mail profissional (não Gmail pessoal) para criar o BM.",
+      "⚠️ Atenção: Nunca adicione mais de 2 admins no início. Meta bloqueia contas com muitos admins novos.",
+      "✅ Pronto: Quando o domínio aparecer como 'Verificado' (bolinha verde), você está seguro."
+    ]
   },
   {
-    id: 2, title: "WhatsApp Cloud API Completo", subtitle: "Seu número na nuvem, sem chip, sem ban", time: "1h 12min",
+    id: 2,
+    title: "WhatsApp Cloud API Completo",
+    subtitle: "Seu número na nuvem, sem chip, sem ban",
+    time: "1h 12min",
     color: "from-emerald-500 to-teal-600",
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>',
-    lessons: ["Criar App em developers.facebook.com e gerar Token de 1 Ano", "Webhook 100% funcional na Cloudflare (código pronto abaixo)", "Conectar número, testar mensagem e salvar em Google Sheets"],
-    prints: ["Print 01: developers.facebook.com → Meus Apps → Criar App → Business → Nome App", "Print 02: WhatsApp → Configuração API → Gerar token permanente (nunca expira)", "Print 03: Webhooks → Callback URL: https://api.SEU_DOMINIO.com/webhook → Verificar"],
-    checklist: ["Token de longa duração copiado", "Webhook respondendo VERIFY_TOKEN", "Mensagem de teste recebida"],
-    template: "Modelo de mensagens aprovadas (Utility + Marketing) + Fluxo de boas-vindas",
-    code: `// Cloudflare Worker - webhook completo - Cole em workers.cloudflare.com
-// Variáveis: VERIFY_TOKEN = SEU_TOKEN_SEGURO_123, WHATSAPP_TOKEN = SEU_TOKEN_LONGO, SHEET_URL = SEU_WEBHOOK_SHEETS
-export default {
+    icon: "",
+    videoUrl: "https://www.youtube.com/embed/SEU_VIDEO_ID_2",
+    lessons: [
+      { 
+        title: "Criando App no Meta Developers", 
+        content: "Acesse developers.facebook.com → Meus Apps → Criar App → Tipo: Business → Nome: Q e-Book API. Anote o App ID.",
+        image: "print-meta-developers.png",
+        code: null 
+      },
+      { 
+        title: "Gerando Token de Longa Duração", 
+        content: "Em WhatsApp → Configuração API → Gerar Token. Este token dura 1 ano (na prática, nunca expira se renovado). Salve em local seguro.",
+        image: "print-gerar-token.png",
+        code: "SEU_TOKEN_LONGO_AQUI" 
+      },
+      { 
+        title: "Configurando Webhook na Cloudflare", 
+        content: "Crie um Worker gratuito em workers.cloudflare.com. Cole o código abaixo. Adicione as variáveis: VERIFY_TOKEN, WHATSAPP_TOKEN, SHEET_URL.",
+        image: "print-cloudflare-worker.png",
+        code: `export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    
     // VERIFICAÇÃO DA META
     if (request.method === 'GET') {
       const mode = url.searchParams.get('hub.mode');
       const token = url.searchParams.get('hub.verify_token');
       const challenge = url.searchParams.get('hub.challenge');
+      
       if (mode === 'subscribe' && token === env.VERIFY_TOKEN) {
         return new Response(challenge, { status: 200 });
       }
       return new Response('Forbidden', { status: 403 });
     }
+    
     // RECEBER MENSAGEM
     if (request.method === 'POST') {
       const body = await request.json();
       const entry = body.entry?.[0]?.changes?.[0]?.value;
       const msg = entry?.messages?.[0];
+      
       if (msg) {
         const from = msg.from;
         const text = msg.text?.body || '';
+        
         // Salva no Google Sheets
         await fetch(env.SHEET_URL, {
           method: 'POST',
-          body: JSON.stringify({ telefone: from, mensagem: text, data: new Date().toISOString() }),
+          body: JSON.stringify({ 
+            telefone: from, 
+            mensagem: text, 
+            data: new Date().toISOString() 
+          }),
           headers: { 'Content-Type': 'application/json' }
         });
+        
         // Resposta automática
         await fetch(\`https://graph.facebook.com/v19.0/SEU_PHONE_NUMBER_ID/messages\`, {
           method: 'POST',
-          headers: { Authorization: \`Bearer \${env.WHATSAPP_TOKEN}\`, 'Content-Type': 'application/json' },
+          headers: { 
+            Authorization: \`Bearer \${env.WHATSAPP_TOKEN}\`, 
+            'Content-Type': 'application/json' 
+          },
           body: JSON.stringify({
             messaging_product: 'whatsapp',
             to: from,
-            text: { body: 'Oi! Aqui é o Q e-Book 🤖 Recebi sua msg: "' + text + '". Seu mentor IA já está te ajudando dentro da aula.' }
+            text: { 
+              body: 'Oi! Recebi sua msg: "' + text + '". Em breve te respondo!' 
+            }
           })
         });
       }
@@ -492,349 +318,641 @@ export default {
     }
     return new Response('Not Found', { status: 404 });
   }
-}`
+}` 
+      },
+      { 
+        title: "Conectando seu número", 
+        content: "Em WhatsApp → Configuração API → Adicionar Número de Telefone. Escolha 'Usar número existente' e siga o fluxo de verificação via SMS.",
+        image: "print-conectar-numero.png",
+        code: null 
+      },
+      { 
+        title: "Testando o envio", 
+        content: "Envie uma mensagem para seu próprio número via API. Se receber, está tudo funcionando! Parabéns, você tem WhatsApp Cloud API rodando.",
+        image: "print-teste-mensagem.png",
+        code: null 
+      }
+    ],
+    checklist: ["App criado no Meta Developers", "Token de longa duração gerado", "Worker Cloudflare criado", "Variáveis de ambiente configuradas", "Webhook verificado pela Meta", "Número conectado", "Mensagem de teste recebida"],
+    mentorTips: [
+      "💡 Dica: O token de 1 ano é REAL. A Meta renovou a política em 2024.",
+      "⚠️ Atenção: Nunca exponha o token no frontend. Use variáveis de ambiente na Cloudflare.",
+      "✅ Pronto: Quando receber a mensagem de teste no seu WhatsApp, está 100% funcional."
+    ]
   },
   {
-    id: 3, title: "Pixel + Catálogo + CAPI", subtitle: "Rastreamento que a Meta não bloqueia", time: "58 min",
+    id: 3,
+    title: "Pixel + Catálogo + CAPI",
+    subtitle: "Rastreamento que a Meta não bloqueia",
+    time: "58 min",
     color: "from-blue-500 to-cyan-600",
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>',
-    lessons: ["Instalar Pixel base + Eventos Purchase, Lead, ViewContent", "Criar Catálogo de e-Books (sim, vende como produto físico)", "CAPI via Google Tag Manager Server-Side (sem programar)"],
-    prints: ["Print 01: Event Manager → Conectar nova fonte → Web → Pixel → Instalação manual", "Print 02: Catálogo → Criar Catálogo → E-commerce → Upload de feed .csv", "Print 03: CAPI Gateway: business.facebook.com → Integrações → Gateway da API de Conversões"],
-    checklist: ["Pixel disparando ViewContent", "CAPI com 85%+ de match rate", "Catálogo aprovado"],
-    template: "Feed de catálogo modelo.csv + GTM Container exportado (importar em 1 clique)",
-    code: `<!-- Pixel Base - SEU_DOMINIO -->
-// No Event Manager: Eventos > Pixel > Instalar manualmente > Copie o código base
-// Cole-o no <head> do seu site. Exemplo de chamadas após instalar:
+    icon: "📊",
+    videoUrl: "https://www.youtube.com/embed/SEU_VIDEO_ID_3",
+    lessons: [
+      { 
+        title: "Instalando o Pixel Base", 
+        content: "Event Manager → Conectar nova fonte → Web → Pixel → Instalação manual. Copie o código base e cole no <head> do seu site.",
+        image: "print-pixel-install.png",
+        code: `<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', 'SEU_PIXEL_ID');
 fbq('track', 'PageView');
-fbq('track', 'ViewContent', {content_name: 'Q e-Book - Edição Definitiva', content_category: 'E-Book'});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
+/></noscript>` 
+      },
+      { 
+        title: "Configurando eventos avançados", 
+        content: "Adicione eventos específicos: ViewContent (quando vê produto), Lead (quando preenche formulário), Purchase (quando compra).",
+        image: "print-eventos-pixel.png",
+        code: `// Evento de visualização de conteúdo
+fbq('track', 'ViewContent', {
+  content_name: 'Q e-Book - Edição Definitiva',
+  content_category: 'E-Book',
+  value: 997,
+  currency: 'BRL'
+});
 
-<!-- CAPI - Evento Purchase (via servidor) -->
-// Quando aluno compra na Kiwify/Hotmart/Yampi, envie:
-fetch('https://graph.facebook.com/v19.0/SEU_PIXEL_ID/events?access_token=SEU_TOKEN_CAPI', {
-  method: 'POST',
-  body: JSON.stringify({
+// Evento de Lead
+fbq('track', 'Lead', {
+  content_name: 'Formulário de contato',
+  value: 0,
+  currency: 'BRL'
+});
+
+// Evento de Compra
+fbq('track', 'Purchase', {
+  content_name: 'Q e-Book - Edição Definitiva',
+  value: 997,
+  currency: 'BRL',
+  transaction_id: 'PEDIDO_123'
+});` 
+      },
+      { 
+        title: "Criando Catálogo de produtos", 
+        content: "Catálogo → Criar Catálogo → E-commerce. Upload de feed CSV com seus produtos. Sim, e-books contam como produtos físicos!",
+        image: "print-catalogo.png",
+        code: null 
+      },
+      { 
+        title: "Configurando CAPI (API de Conversões)", 
+        content: "CAPI envia dados direto do servidor (não do navegador). Use Google Tag Manager Server-Side ou webhook da plataforma de pagamento.",
+        image: "print-capi-setup.png",
+        code: `// CAPI - Envio via servidor (exemplo Node.js)
+const axios = require('axios');
+
+async function sendPurchaseEvent(customerData) {
+  const payload = {
     data: [{
       event_name: 'Purchase',
-      event_time: Math.floor(Date.now()/1000),
+      event_time: Math.floor(Date.now() / 1000),
+      action_source: 'website',
       user_data: {
-        ph: [hash_sha256(SEU_TELEFONE)],
-        em: [hash_sha256(SEU_EMAIL)]
+        em: [hashSHA256(customerData.email)],
+        ph: [hashSHA256(customerData.phone)],
+        fn: [hashSHA256(customerData.firstName)],
+        ln: [hashSHA256(customerData.lastName)]
       },
-      custom_data: { value: 997, currency: 'BRL' }
+      custom_data: {
+        value: 997,
+        currency: 'BRL',
+        content_name: 'Q e-Book - Edição Definitiva',
+        content_ids: ['ebook_definitiva_2025']
+      }
     }]
-  })
-})`
+  };
+
+  const response = await axios.post(
+    'https://graph.facebook.com/v19.0/SEU_PIXEL_ID/events?access_token=SEU_TOKEN_CAPI',
+    payload
+  );
+
+  return response.data;
+}` 
+      }
+    ],
+    checklist: ["Pixel instalado no site", "Evento PageView disparando", "Evento ViewContent configurado", "Evento Purchase configurado", "Catálogo criado", "Feed CSV enviado", "CAPI com match rate > 85%"],
+    mentorTips: [
+      "💡 Dica: CAPI + Pixel juntos = match rate de 95%+. Só Pixel = 60-70%.",
+      "⚠️ Atenção: Hash SHA256 dos dados do cliente é OBRIGATÓRIO no CAPI.",
+      "✅ Pronto: Quando o Event Manager mostrar 'Ativo' nos 3 eventos, está perfeito."
+    ]
   },
   {
-    id: 4, title: "Anúncios que Vendem", subtitle: "Advantage+ e Click to WhatsApp sem queimar dinheiro", time: "1h 24min",
+    id: 4,
+    title: "Anúncios que Vendem",
+    subtitle: "Advantage+ e Click to WhatsApp sem queimar dinheiro",
+    time: "1h 24min",
     color: "from-fuchsia-500 to-purple-600",
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>',
-    lessons: ["Estrutura 1-3-3 validada: 1 campanha, 3 conjuntos, 3 criativos (R$30/dia pra começar)", "Advantage+ Criativo + Público + Orçamento: como a IA da Meta vende por você", "Anúncio Click to WhatsApp com gatilho: prova, dor, solução em 15 seg"],
-    prints: ["Print 01: Gerenciador → Criar → Vendas / Mensagens → Advantage+ Shopping Campaign ON", "Print 02: Conjunto → Localização: Brasil → 35-65+ → Advantage+ Audience ON → Orçamento R$20", "Print 03: Anúncio → Mensagem: Template Q e-Book → Vídeo 9:16 com legenda queimada"],
-    checklist: ["3 vídeos 9:16 gravados (celular)", "CTA WhatsApp configurado", "Regra automática: pausar se CPA > R$45"],
-    template: "15 roteiros de Reels que vendem + 20 hooks prontos + Biblioteca de criativos",
-    code: `// Regra Automática - Gerenciador de Anúncios > Regras
-Nome: Pausar se caro
-Condição: Custo por resultado > R$45 nos últimos 2 dias
-Ação: Desativar conjunto
-Notificação: SEU_EMAIL@SEU_DOMINIO.com.br
-
-// Estrutura de anúncio validada:
-Campanha: [Q-EBOOK] - Vendas - CAPI ON - R$30
-CJ1: Aberto - Advantage+ - 35-65+ - Brasil
-CJ2: Interesse - Empreendedorismo + Marketing Digital
-CJ3: Lookalike 1% Compradores (após 50 vendas)
-AD1: Vídeo - Depoimento real (UGC)
-AD2: Vídeo - Tela do curso por dentro
-AD3: Imagem - Tabela de preços que você vai cobrar`
+    icon: "🎯",
+    videoUrl: "https://www.youtube.com/embed/SEU_VIDEO_ID_4",
+    lessons: [
+      { 
+        title: "Estrutura 1-3-3 validada", 
+        content: "1 campanha, 3 conjuntos de anúncio, 3 criativos cada. Orçamento inicial: R$30/dia. Esta é a estrutura mais testada e aprovada.",
+        image: "print-estrutura-133.png",
+        code: null 
+      },
+      { 
+        title: "Configurando Advantage+", 
+        content: "Advantage+ é a IA da Meta que otimiza tudo: público, criativo, posicionamento. Ative em: Campanha → Advantage+ Shopping Campaign.",
+        image: "print-advantage-plus.png",
+        code: null 
+      },
+      { 
+        title: "Criando anúncio Click to WhatsApp", 
+        content: "Objetivo: Mensagens → WhatsApp. Criativo: Vídeo 9:16 de 15-30s com legenda queimada. CTA: Enviar mensagem.",
+        image: "print-click-whatsapp.png",
+        code: null 
+      },
+      { 
+        title: "Regras automáticas de proteção", 
+        content: "Crie regras para pausar anúncios caros automaticamente. Ex: Se CPA > R$45 em 2 dias, pausar conjunto.",
+        image: "print-regras-automaticas.png",
+        code: null 
+      }
+    ],
+    checklist: ["Campanha criada com objetivo correto", "3 conjuntos configurados", "3 criativos por conjunto", "Advantage+ ativado", "CTA WhatsApp configurado", "Regra automática de CPA criada"],
+    mentorTips: [
+      "💡 Dica: Vídeos UGC (User Generated Content) convertem 3x mais que vídeos produzidos.",
+      "⚠️ Atenção: Nunca edite um anúncio ativo. Duplique e pause o original.",
+      "✅ Pronto: Quando tiver 3 vendas com ROAS > 2, está na hora de escalar."
+    ]
   },
   {
-    id: 5, title: "Rastrear Quem Comprou", subtitle: "UTM + Google Sheets que fala a verdade", time: "52 min",
+    id: 5,
+    title: "Rastrear Quem Comprou",
+    subtitle: "UTM + Google Sheets que fala a verdade",
+    time: "52 min",
     color: "from-amber-500 to-orange-600",
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>',
-    lessons: ["UTM Builder do Q e-Book: saber de qual anúncio veio cada venda", "Automação Kiwify/Hotmart → Sheets → WhatsApp (cliente compra e já recebe acesso)", "Dashboard simples: quanto gastei, quanto voltou, ROAS real"],
-    prints: ["Print 01: utm.SEU_DOMINIO.com → utm_source=meta & utm_campaign=q-ebook-definitiva & utm_content=video01", "Print 02: Zapier/Make → Gatilho: Nova venda → Ação: Adicionar linha no Sheets + Enviar WhatsApp", "Print 03: Looker Studio → Conectar Sheets → Gráfico: Vendas por campanha"],
-    checklist: ["UTM em todos os links", "Automação testada com compra de R$1", "Dashboard mostrando lucro"],
-    template: "Planilha Financeira Q e-Book + Looker Studio pronto + Script Google Apps Script",
-    code: `// Google Apps Script - Cole em script.google.com (vinculado à sua planilha)
-// Ative gatilho: Ao receber POST do checkout
-function doPost(e) {
-  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("VENDAS");
-  const data = JSON.parse(e.postData.contents);
-  sheet.appendRow([
-    new Date(),
-    data.customer.email,
-    data.customer.phone,
-    data.product.name,
-    data.purchase.value,
-    data.utm.source,
-    data.utm.campaign,
-    data.utm.content,
-    '=SE(D2<>"";"Pago";"Pendente")'
-  ]);
-  // Envia WhatsApp com acesso
-  const url = "https://graph.facebook.com/v19.0/SEU_PHONE_NUMBER_ID/messages";
-  UrlFetchApp.fetch(url, {
-    method: "post",
-    headers: { Authorization: "Bearer SEU_TOKEN_WHATSAPP" },
-    payload: JSON.stringify({
-      messaging_product: "whatsapp",
-      to: data.customer.phone,
-      template: { name: "acesso_liberado", language: { code: "pt_BR" },
-        components: [{ type: "body", parameters: [{ type: "text", text: data.customer.name }] }] }
-    })
-  });
-  return ContentService.createTextOutput("OK");
-}
+    icon: "📈",
+    videoUrl: "https://www.youtube.com/embed/SEU_VIDEO_ID_5",
+    lessons: [
+      { 
+        title: "Criando links UTM rastreáveis", 
+        content: "Use UTM Builder para saber de qual anúncio veio cada venda. Parâmetros: utm_source, utm_medium, utm_campaign, utm_content.",
+        image: "print-utm-builder.png",
+        code: `// Builder UTM - use sempre
+const meuLink = \`https://SEU_DOMINIO.com/checkout?utm_source=meta&utm_medium=cpc&utm_campaign=q_definitiva&utm_content=\${nomeDoCriativo}&utm_term=\${idadePublico}\`;
 
-// Builder UTM - use sempre:
-const meuLink = \`https://SEU_DOMINIO.com/checkout?utm_source=meta&utm_medium=cpc&utm_campaign=q_definitiva&utm_content=\${nomeDoCriativo}&utm_term=\${idadePublico}\`;`
+// Exemplo prático:
+const linkVideo1 = 'https://qebook.com/checkout?utm_source=meta&utm_medium=cpc&utm_campaign=q_definitiva&utm_content=video_depoimento_01&utm_term=35_65';
+
+const linkVideo2 = 'https://qebook.com/checkout?utm_source=meta&utm_medium=cpc&utm_campaign=q_definitiva&utm_content=video_tela_curso_02&utm_term=35_65';` 
+      },
+      { 
+        title: "Automação Kiwify/Hotmart → Sheets", 
+        content: "Use Zapier ou Make para: quando houver nova venda → adicionar linha no Google Sheets → enviar WhatsApp com acesso.",
+        image: "print-automacao-zapier.png",
+        code: null 
+      },
+      { 
+        title: "Dashboard de ROAS no Looker Studio", 
+        content: "Conecte seu Google Sheets ao Looker Studio (grátis). Crie gráficos: Vendas por campanha, ROAS por criativo, CPA por público.",
+        image: "print-looker-dashboard.png",
+        code: null 
+      }
+    ],
+    checklist: ["UTM em todos os links de anúncio", "Automação de venda → Sheets funcionando", "WhatsApp de boas-vindas enviado", "Dashboard Looker Studio criado", "ROAS calculado corretamente"],
+    mentorTips: [
+      "💡 Dica: Teste a automação com uma compra de R$1 antes de escalar.",
+      "⚠️ Atenção: Sem UTM, você voa às cegas. Sempre use UTM.",
+      "✅ Pronto: Quando o dashboard mostrar lucro real (não faturamento), está no controle."
+    ]
   },
   {
-    id: 6, title: "Como Pagar a Meta", subtitle: "PIX, cartão e como nunca ficar sem conta", time: "38 min",
+    id: 6,
+    title: "Como Pagar a Meta",
+    subtitle: "PIX, cartão e como nunca ficar sem conta",
+    time: "38 min",
     color: "from-slate-500 to-gray-700",
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>',
-    lessons: ["PIX na Meta: limite, comprovante e como evitar 'pagamento não autorizado'", "Cartão que a Meta aceita: virtual, limite diário e 2 cartões de backup", "O que fazer quando a conta cai: botão 'Solicitar Análise' que funciona"],
-    prints: ["Print 01: Cobrança → Adicionar forma → PIX → Gerar QR Code → Pagar em até 10 min", "Print 02: Limite de gastos da conta → Definir R$150/dia no início → Aumentar 20% a cada 3 dias", "Print 03: Central de contas → Qualidade da conta → Solicitar análise → Escrever texto modelo"],
-    checklist: ["PIX testado", "2 cartões cadastrados (principal + backup)", "Limite diário configurado"],
-    template: "Texto de recurso que aprova (3 modelos) + Checklist de documentos para verificação",
-    code: `// Modelo de texto para contestação - copie e cole na Central
-"Olá equipe Meta,
-Minha empresa Q e-Book - SEU_DOMINIO.com.br vende e-books educacionais sobre marketing digital.
-Todos os meus anúncios seguem as políticas, sem promessas irreais.
-Meu domínio SEU_DOMINIO.com.br está verificado e meu CNPJ é SEU_CNPJ.
-Meu site possui política de privacidade e termos em SEU_DOMINIO.com.br/privacidade.
-Solicito revisão humanizada. Obrigado!"
+    icon: "💳",
+    videoUrl: "https://www.youtube.com/embed/SEU_VIDEO_ID_6",
+    lessons: [
+      { 
+        title: "Configurando PIX na Meta", 
+        content: "Cobrança → Adicionar forma de pagamento → PIX. Gere QR Code e pague em até 10 minutos. Limite inicial: R$150/dia.",
+        image: "print-pix-meta.png",
+        code: null 
+      },
+      { 
+        title: "Cartões que a Meta aceita", 
+        content: "Cartões virtuais (Nubank, Inter, Wise) funcionam melhor. Tenha 2 cartões: principal + backup. Limite diário: R$200 no início.",
+        image: "print-cartoes-meta.png",
+        code: null 
+      },
+      { 
+        title: "O que fazer quando a conta cai", 
+        content: "Central de Contas → Qualidade da Conta → Solicitar Análise. Use o modelo de texto abaixo. 90% das contas são reativadas em 24-48h.",
+        image: "print-solicitar-analise.png",
+        code: `"Olá equipe Meta,
 
----
-Fluxo de pagamento recomendado:
-Dia 1-7: PIX manual todo dia R$30-50
-Dia 8+: Cartão virtual com limite R$200 (Nubank, Inter, Wise)
-Backup: Cartão 02 cadastrado mas inativo
-Regra de ouro: NUNCA deve mais de 15% do limite da conta.`
+Minha empresa Q e-Book - SEU_DOMINIO.com.br vende e-books educacionais sobre marketing digital.
+
+Todos os meus anúncios seguem as políticas, sem promessas irreais.
+
+Meu domínio SEU_DOMINIO.com.br está verificado e meu CNPJ é SEU_CNPJ.
+
+Meu site possui política de privacidade e termos em SEU_DOMINIO.com.br/privacidade.
+
+Solicito revisão humanizada. Obrigado!"` 
+      }
+    ],
+    checklist: ["PIX testado com sucesso", "2 cartões cadastrados", "Limite diário configurado", "Documento de recurso salvo"],
+    mentorTips: [
+      "💡 Dica: Pague o PIX em até 10 min. Depois disso, expira e precisa gerar novo.",
+      "⚠️ Atenção: Nunca deixe a conta zerar. Meta bloqueia contas inadimplentes.",
+      "✅ Pronto: Quando tiver 2 formas de pagamento ativas, está blindado."
+    ]
   },
   {
-    id: 7, title: "Escalar e Lucrar", subtitle: "De R$30/dia para R$300/dia com lucro", time: "1h 05min",
+    id: 7,
+    title: "Escalar e Lucrar",
+    subtitle: "De R$30/dia para R$300/dia com lucro",
+    time: "1h 05min",
     color: "from-violet-600 to-indigo-800",
-    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>',
-    lessons: ["Quando escalar: 3 vendas com ROAS > 2 por 2 dias seguidos = sinal verde", "Lookalike 1%, 3%, 5% + Remarketing 7, 14, 30 dias (quem viu e não comprou)", "Aumentar 20-30% a cada 48h, nunca dobrar. Duplicar conjunto vencedor, não editar"],
-    prints: ["Print 01: Públicos → Criar público → Lookalike → Origem: Compradores últimos 60d → 1%", "Print 02: Remarketing → Visitou checkout 7d mas não comprou → Anúncio com bônus extra", "Print 03: Escala → Duplicar conjunto → Aumentar orçamento para R$90 → Manter original ativo"],
-    checklist: ["Lookalike 1% criado", "Remarketing 7d ativo", "Regra: escala só com ROAS > 2"],
-    template: "Planilha de escala + Calculadora de ROAS + Mapa de remarketing (quando usar cada um)",
-    code: `// Calculadora de ROAS - use antes de escalar
+    icon: "🚀",
+    videoUrl: "https://www.youtube.com/embed/SEU_VIDEO_ID_7",
+    lessons: [
+      { 
+        title: "Quando escalar: o sinal verde", 
+        content: "3 vendas com ROAS > 2 por 2 dias seguidos = sinal verde. Antes disso, otimize. Depois disso, escale com confiança.",
+        image: "print-sinal-verde.png",
+        code: `// Calculadora de ROAS
 function deveEscalar(gasto, faturamento, dias) {
   const roas = faturamento / gasto;
-  const vendasPorDia = faturamento / 997 / dias; // R$997 ticket
+  const vendasPorDia = faturamento / 997 / dias;
+  
   if (roas >= 2 && dias >= 2 && vendasPorDia >= 1.5) {
     return "✅ ESCALAR +20% a cada 48h";
   }
   if (roas < 1.5) {
-    return "⛔ OTIMIZAR criativo e público";
+    return " OTIMIZAR criativo e público";
   }
   return "⏳ AGUARDAR mais 24h de dados";
 }
 
-// Mapa de escala:
-Semana 1: R$30/dia → Validar
-Semana 2: R$90/dia → 3 conjuntos (R$30 cada)
-Semana 3: R$180/dia → Duplica vencedor
-Semana 4: R$300/dia → Lookalike + Remarketing
-Lucro estimado com ROAS 2.5: R$450/dia = R$13.500/mês`
+// Exemplo de uso:
+const resultado = deveEscalar(300, 900, 3);
+console.log(resultado); // "✅ ESCALAR +20% a cada 48h"` 
+      },
+      { 
+        title: "Criando públicos Lookalike", 
+        content: "Públicos → Criar público → Lookalike → Origem: Compradores últimos 60 dias → 1%. Este é o público mais poderoso da Meta.",
+        image: "print-lookalike.png",
+        code: null 
+      },
+      { 
+        title: "Remarketing inteligente", 
+        content: "Crie 3 públicos de remarketing: 7 dias (quente), 14 dias (morno), 30 dias (frio). Anúncios diferentes para cada um.",
+        image: "print-remarketing.png",
+        code: null 
+      },
+      { 
+        title: "Regra de ouro da escala", 
+        content: "Aumente 20-30% a cada 48h. NUNCA dobre o orçamento. Duplique o conjunto vencedor, não edite o original.",
+        image: "print-escala-20porcento.png",
+        code: null 
+      }
+    ],
+    checklist: ["Lookalike 1% criado", "Remarketing 7d ativo", "Remarketing 14d ativo", "Remarketing 30d ativo", "Regra de escala configurada", "ROAS > 2 por 2 dias"],
+    mentorTips: [
+      "💡 Dica: Semana 1: R$30/dia. Semana 2: R$90/dia. Semana 3: R$180/dia. Semana 4: R$300/dia.",
+      "️ Atenção: Escalar rápido demais = queimar dinheiro. Respeite o ritmo de 20% a cada 48h.",
+      "✅ Pronto: Com ROAS 2.5 e R$300/dia, você lucra R$450/dia = R$13.500/mês."
+    ]
   }
 ];
 
-const prices = [
-  { price: "R$497", title: "Pacote Iniciante", includes: ["BM + Pixel + WhatsApp API", "1 campanha Advantage+", "Suporte 7 dias via Zap"], target: "Amigos, afiliados iniciantes" },
-  { price: "R$997", title: "Pacote Profissional", includes: ["Tudo do Iniciante + CAPI + Catálogo", "3 campanhas + Remarketing", "Automação Sheets + Dashboard", "Suporte 30 dias"], target: "Empreendedores locais, infoprodutores", featured: true },
-  { price: "R$1.997", title: "Pacote Legado", includes: ["Tudo do Profissional + Escala até R$300/dia", "Lookalike + Treinamento equipe", "Contrato + Script de vendas", "Mentoria 1h com você"], target: "Empresas, lançamentos" }
-];
+// ESTADO DA APLICAÇÃO
+let currentModule = null;
+let completedLessons = new Set();
+let chatHistory = [];
 
-const faqs = [
-  { q: "Eu tenho 55+, vou conseguir?", a: "Sim. Fonte grande, prints descritos, velocidade 0.8x, transcrição e Q explicando como se fosse seu neto paciente. Módulos curtos, código copiar-colar." },
-  { q: "Preciso pagar alguma ferramenta cara?", a: "Não. Cloudflare Worker (grátis), Google Sheets (grátis), WhatsApp Cloud API (grátis). Domínio SEU_DOMINIO (~R$40/ano) e conta Meta com PIX." },
-  { q: "O token de 1 ano é real?", a: "Sim. Na aula 2 geramos token de longa duração (nunca expira na prática, renovável). Você salva em variável de ambiente, nunca no front." },
-  { q: "Posso revender este curso?", a: "Sim. Esta é a Edição Definitiva tributo. Você pode vender instalação usando tabela R$497/R$997/R$1997. Contrato simples incluso. Não é PLR de conteúdo alheio, é seu serviço." }
-];
+// INICIALIZAÇÃO
+function init() {
+  renderModuleList();
+  renderModules();
+  loadProgress();
+  updateProgressBar();
+}
 
-let currentModule = 1;
-let currentFaq = null;
-
+// RENDERIZAR LISTA DE MÓDULOS
 function renderModuleList() {
   const list = document.getElementById('moduleList');
-  list.innerHTML = modules.map(m => `
-    <button onclick="selectModule(${m.id})" class="module-btn w-full text-left rounded-[14px] p-4 flex gap-3 transition ${currentModule === m.id ? 'active shadow-lg' : ''}">
-      <div class="w-10 h-10 rounded-xl grid place-items-center bg-gradient-to-br ${m.color} text-white">${m.icon}</div>
-      <div class="min-w-0 flex-1">
-        <div class="text-[13px] tracking-wide uppercase opacity-70">Módulo ${m.id} • ${m.time}</div>
-        <div class="font-bold leading-5 truncate">${m.title}</div>
-        <div class="text-[12px] opacity-70 leading-4 truncate">${m.subtitle}</div>
-      </div>
-    </button>
-  `).join('');
+  list.innerHTML = modulesData.map(m => {
+    const isCompleted = isModuleCompleted(m.id);
+    const isActive = currentModule === m.id;
+    return `
+      <button onclick="startModule(${m.id})" class="w-full text-left rounded-xl p-3 flex gap-3 transition ${isActive ? 'bg-gradient-to-r from-violet-600 to-indigo-600 shadow-lg' : 'hover:bg-white/[0.06]'}">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br ${m.color} grid place-items-center text-xl shrink-0">
+          ${m.icon}
+        </div>
+        <div class="min-w-0 flex-1">
+          <div class="text-[11px] tracking-wide uppercase opacity-70">Módulo ${m.id} • ${m.time}</div>
+          <div class="font-bold leading-tight truncate">${m.title}</div>
+          <div class="text-[11px] opacity-70 leading-tight truncate mt-0.5">${m.subtitle}</div>
+          ${isCompleted ? '<div class="text-[10px] text-emerald-400 font-bold mt-1">✓ Concluído</div>' : ''}
+        </div>
+      </button>
+    `;
+  }).join('');
 }
 
-function renderModuleContent() {
-  const m = modules.find(x => x.id === currentModule);
-  const content = document.getElementById('moduleContent');
-  content.innerHTML = `
-    <div class="h-1 w-full bg-gradient-to-r ${m.color}"></div>
-    <div class="p-6 lg:p-8">
-      <div class="flex flex-wrap items-start justify-between gap-4">
-        <div>
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/10 text-[11px] tracking-widest uppercase">Módulo ${m.id} • ${m.time}</div>
-          <h3 class="display text-[30px] leading-[1.05] mt-3">${m.title}</h3>
-          <p class="text-white/60 mt-1">${m.subtitle}</p>
-        </div>
-        <div class="flex gap-2">
-          <span class="px-3 py-1.5 rounded-full bg-emerald-500/15 text-emerald-200 text-xs font-bold flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>Código pronto</span>
-          <span class="px-3 py-1.5 rounded-full bg-violet-500/15 text-violet-200 text-xs font-bold flex items-center gap-1.5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>Mentor IA dentro</span>
-        </div>
-      </div>
-      <div class="mt-6 rounded-[18px] overflow-hidden bg-[#0B1B33] border border-white/10 grid lg:grid-cols-[1.4fr_0.6fr]">
-        <div class="aspect-[16/10] bg-gradient-to-br from-[#1A335F] to-[#0B1B33] relative p-5 flex flex-col">
-          <div class="flex items-center justify-between text-[11px] uppercase tracking-widest text-white/50">
-            <span>Video Aula • Com legenda grande</span>
-            <span>Q e-Book Player</span>
+// RENDERIZAR MÓDULOS
+function renderModules() {
+  const container = document.getElementById('modules');
+  container.innerHTML = modulesData.map(m => `
+    <div id="module-${m.id}" class="module-content">
+      <div class="rounded-[24px] bg-[#0E223F] border border-white/10 overflow-hidden">
+        <div class="h-1 w-full bg-gradient-to-r ${m.color}"></div>
+        <div class="p-6 lg:p-8">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-6">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/10 text-[11px] tracking-widest uppercase mb-3">
+                Módulo ${m.id} • ${m.time}
+              </div>
+              <h2 class="display text-[32px] leading-[1.05]">${m.title}</h2>
+              <p class="text-white/60 mt-1">${m.subtitle}</p>
+            </div>
+            <button onclick="markModuleComplete(${m.id})" class="px-4 py-2 rounded-full bg-emerald-500/20 text-emerald-300 text-sm font-bold flex items-center gap-2 hover:bg-emerald-500/30 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              Marcar como concluído
+            </button>
           </div>
-          <div class="flex-1 grid place-items-center">
-            <div class="text-center">
-              <div class="w-20 h-20 mx-auto rounded-full bg-white text-[#0B1B33] grid place-items-center"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#0B1B33" stroke="none"><polygon points="6 3 20 12 6 21 6 3"/></svg></div>
-              <div class="mt-4 font-bold">Assistir agora</div>
-              <div class="text-[12px] text-white/60">O Mentor IA Q explica este trecho em linguagem simples</div>
+
+          <!-- VÍDEO AULA -->
+          <div class="rounded-2xl overflow-hidden border border-white/10 mb-8">
+            <div class="aspect-video video-placeholder relative">
+              <iframe 
+                src="${m.videoUrl}" 
+                class="absolute inset-0 w-full h-full"
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+              </iframe>
             </div>
           </div>
-          <div class="flex gap-2">
-            <div class="h-1.5 flex-1 bg-white/15 rounded-full overflow-hidden"><div class="h-full w-[68%] bg-white"></div></div>
-            <span class="text-[11px] text-white/60">32:14 / ${m.time}</span>
+
+          <!-- LIÇÕES -->
+          <div class="space-y-6 mb-8">
+            ${m.lessons.map((lesson, idx) => `
+              <div class="rounded-xl bg-white/[0.04] border border-white/10 p-5">
+                <div class="flex items-start gap-3 mb-3">
+                  <div class="w-8 h-8 rounded-full bg-gradient-to-br ${m.color} grid place-items-center font-bold text-sm shrink-0">
+                    ${idx + 1}
+                  </div>
+                  <h3 class="font-bold text-lg">${lesson.title}</h3>
+                </div>
+                <p class="text-[15px] leading-7 text-white/80 ml-11 mb-4">${lesson.content}</p>
+                
+                ${lesson.image ? `
+                  <div class="ml-11 mb-4">
+                    <div class="text-[12px] text-violet-300 font-bold mb-2">📸 Print de referência:</div>
+                    <div class="rounded-lg image-placeholder border border-white/10 p-8 text-center">
+                      <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-2 opacity-50"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                        <div class="text-sm">Substitua por: <code class="px-2 py-1 rounded bg-white/10">${lesson.image}</code></div>
+                        <div class="text-xs mt-1 opacity-70">Coloque a imagem na mesma pasta do HTML</div>
+                      </div>
+                    </div>
+                  </div>
+                ` : ''}
+                
+                ${lesson.code ? `
+                  <div class="ml-11">
+                    <div class="flex items-center justify-between mb-2">
+                      <span class="text-[12px] text-violet-300 font-bold">Código pronto:</span>
+                      <button onclick="copyCode(this)" class="px-3 py-1 rounded-full bg-white text-[#0B1B33] text-xs font-bold flex items-center gap-1.5 hover:bg-white/90">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                        Copiar
+                      </button>
+                    </div>
+                    <pre class="rounded-lg bg-[#070F1F] border border-white/10 p-4 text-[12px] leading-6 overflow-x-auto">${escapeHtml(lesson.code)}</pre>
+                  </div>
+                ` : ''}
+              </div>
+            `).join('')}
           </div>
-        </div>
-        <div class="p-5 bg-[#101F3A] border-t lg:border-t-0 lg:border-l border-white/10">
-          <div class="font-bold text-[13px] flex items-center gap-2"><span class="w-7 h-7 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 grid place-items-center font-black">Q</span> Mentor IA Q — dentro da aula</div>
-          <div class="mt-3 space-y-3 text-[13px] leading-6">
-            <div class="rounded-xl bg-white/[0.06] border border-white/10 p-3 text-white/80">"Aqui, no minuto 12, você cola o token que gerei. Se der erro 190, clique em 'Renovar' que eu te mostro."</div>
-            <div class="rounded-xl bg-violet-600 text-white p-3">"Quer que eu gere seu VERIFY_TOKEN seguro agora?" <span class="underline font-bold">Gerar</span></div>
-            <div class="flex gap-2">
-              <span class="px-3 py-1 rounded-full bg-white/10 text-[11px]">Explique como se eu tivesse 55 anos</span>
-              <span class="px-3 py-1 rounded-full bg-white/10 text-[11px]">Mostrar print grande</span>
+
+          <!-- CHECKLIST -->
+          <div class="rounded-xl bg-emerald-500/10 border border-emerald-500/20 p-5 mb-6">
+            <h3 class="font-bold text-emerald-200 mb-3 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              Checklist do Módulo
+            </h3>
+            <div class="space-y-2">
+              ${m.checklist.map((item, idx) => `
+                <div class="checklist-item flex items-center gap-3">
+                  <input type="checkbox" id="check-${m.id}-${idx}" class="w-5 h-5 rounded border-white/30 bg-white/10 text-emerald-500 focus:ring-emerald-500" onchange="updateChecklist(${m.id})">
+                  <label for="check-${m.id}-${idx}" class="text-[14px] text-white/90 cursor-pointer">${item}</label>
+                </div>
+              `).join('')}
             </div>
           </div>
-        </div>
-      </div>
-      <div class="mt-8 grid lg:grid-cols-2 gap-6">
-        <div class="space-y-6">
-          <div>
-            <div class="font-bold flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-violet-300"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>O que você vai fazer (passo a passo)</div>
-            <ul class="mt-3 space-y-2">${m.lessons.map(l => `<li class="flex gap-2 text-[14px] leading-6 text-white/80"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-400 mt-0.5 shrink-0"><path d="M20 6 9 17l-5-5"/></svg>${l}</li>`).join('')}</ul>
-          </div>
-          <div>
-            <div class="font-bold flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-violet-300"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>Prints descritos (pra não se perder)</div>
-            <ul class="mt-3 space-y-2">${m.prints.map(p => `<li class="text-[13px] leading-6 text-white/65 bg-white/[0.04] border border-white/10 rounded-xl p-3">${p}</li>`).join('')}</ul>
-          </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <div class="rounded-xl bg-emerald-500/10 border border-emerald-500/20 p-4">
-              <div class="font-bold text-emerald-200 text-[13px] flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Checklist do módulo</div>
-              <ul class="mt-2 space-y-1 text-[13px] text-white/80">${m.checklist.map(c => `<li>• ${c}</li>`).join('')}</ul>
-            </div>
-            <div class="rounded-xl bg-violet-500/10 border border-violet-500/20 p-4">
-              <div class="font-bold text-violet-200 text-[13px] flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>Template incluso</div>
-              <div class="mt-2 text-[13px] text-white/80">${m.template}</div>
+
+          <!-- DICAS DO MENTOR -->
+          <div class="rounded-xl bg-violet-500/10 border border-violet-500/20 p-5">
+            <h3 class="font-bold text-violet-200 mb-3 flex items-center gap-2">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 grid place-items-center text-xs font-black">Q</div>
+              Dicas do Mentor IA Q
+            </h3>
+            <div class="space-y-2">
+              ${m.mentorTips.map(tip => `
+                <div class="text-[14px] text-white/90 leading-6">${tip}</div>
+              `).join('')}
             </div>
           </div>
-        </div>
-        <div>
-          <div class="flex items-center justify-between">
-            <div class="font-bold flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-violet-300"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>Código pronto — só trocar SEU_DOMINIO</div>
-            <button onclick="copyText('code-${m.id}')" class="px-3 py-1.5 rounded-full bg-white text-[#0B1B33] text-xs font-bold flex items-center gap-1.5 hover:bg-white/90"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg><span id="btn-code-${m.id}">Copiar código</span></button>
+
+          <!-- NAVEGAÇÃO -->
+          <div class="mt-8 flex justify-between">
+            ${m.id > 1 ? `
+              <button onclick="startModule(${m.id - 1})" class="px-6 py-3 rounded-full bg-white/10 border border-white/20 font-semibold hover:bg-white/15 transition flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                Módulo Anterior
+              </button>
+            ` : '<div></div>'}
+            ${m.id < 7 ? `
+              <button onclick="startModule(${m.id + 1})" class="px-6 py-3 rounded-full bg-gradient-to-r from-violet-500 to-indigo-600 font-bold hover:shadow-lg transition flex items-center gap-2">
+                Próximo Módulo
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            ` : `
+              <button onclick="showWelcome()" class="px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 font-bold hover:shadow-lg transition flex items-center gap-2">
+                Voltar ao Início
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </button>
+            `}
           </div>
-          <pre class="mt-3 rounded-xl bg-[#070F1F] border border-white/10 p-4 text-[12px] leading-6 overflow-x-auto max-h-[460px] whitespace-pre-wrap break-words">${m.code.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</pre>
-          <div class="mt-3 text-[11px] text-white/50">⚠️ Use placeholders: SEU_DOMINIO, SEU_TOKEN, SEU_PHONE_NUMBER_ID. Nunca exponha token real no front. Mentor IA Q valida seu .env antes de publicar.</div>
         </div>
       </div>
     </div>
-  `;
+  `).join('');
 }
 
-function selectModule(id) {
+// INICIAR MÓDULO
+function startModule(id) {
   currentModule = id;
+  document.querySelectorAll('.module-content').forEach(el => el.classList.remove('active'));
+  document.getElementById(`module-${id}`).classList.add('active');
   renderModuleList();
-  renderModuleContent();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  
+  // Mensagem do Mentor IA
+  addMentorMessage(`Olá! Sou o Mentor IA Q. Estou aqui para te guiar no **Módulo ${id}: ${modulesData[id-1].title}**. Qualquer dúvida, é só perguntar! 🚀`);
 }
 
-function renderPrices() {
-  document.getElementById('priceCards').innerHTML = prices.map(p => `
-    <div class="rounded-[20px] border p-6 relative ${p.featured ? 'bg-[#0B1B33] text-white border-[#0B1B33] shadow-xl scale-[1.02]' : 'bg-white border-black/10'}">
-      ${p.featured ? '<div class="absolute -top-3 left-6 px-3 py-1 rounded-full bg-gradient-to-r from-violet-500 to-indigo-600 text-white text-[11px] font-extrabold tracking-widest uppercase">Mais vendido</div>' : ''}
-      <div class="flex items-baseline gap-2">
-        <span class="text-[32px] font-black">${p.price}</span>
-        <span class="text-[13px] ${p.featured ? 'text-white/60' : 'text-black/60'}">/ projeto</span>
-      </div>
-      <div class="font-bold mt-1">${p.title}</div>
-      <div class="text-[12px] mt-1 ${p.featured ? 'text-white/60' : 'text-black/60'}">Ideal para: ${p.target}</div>
-      <ul class="mt-4 space-y-2 text-[13px] leading-6">${p.includes.map(i => `<li class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 ${p.featured ? 'text-violet-300' : 'text-emerald-600'}"><path d="M20 6 9 17l-5-5"/></svg>${i}</li>`).join('')}</ul>
-      <button class="mt-5 w-full py-3 rounded-full font-bold text-sm ${p.featured ? 'bg-white text-[#0B1B33]' : 'bg-[#0B1B33] text-white'}">Copiar proposta no Zap</button>
-    </div>
-  `).join('');
+// MARCAR MÓDULO COMO CONCLUÍDO
+function markModuleComplete(id) {
+  completedLessons.add(id);
+  saveProgress();
+  updateProgressBar();
+  renderModuleList();
+  addMentorMessage(`Parabéns! Você concluiu o **Módulo ${id}**! 🎉 ${id < 7 ? 'Pronto para o próximo?' : 'Você completou todo o curso! Está pronto para vender!'}`);
 }
 
-function renderFaqs() {
-  document.getElementById('faqList').innerHTML = faqs.map((f, i) => `
-    <button onclick="toggleFaq(${i})" class="w-full text-left p-6 flex items-start justify-between gap-6">
-      <div>
-        <div class="font-bold text-[16px]">${f.q}</div>
-        <div id="faq-content-${i}" class="accordion-content ${currentFaq === i ? 'open' : ''}">
-          <div class="mt-3 text-[14px] leading-7 text-white/70">${f.a}</div>
-        </div>
-      </div>
-      ${currentFaq === i ? '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>' : '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white/50"><path d="m6 9 6 6 6-6"/></svg>'}
-    </button>
-  `).join('');
+// ATUALIZAR CHECKLIST
+function updateChecklist(moduleId) {
+  saveProgress();
 }
 
-function toggleFaq(i) {
-  currentFaq = currentFaq === i ? null : i;
-  renderFaqs();
+// VERIFICAR SE MÓDULO ESTÁ CONCLUÍDO
+function isModuleCompleted(id) {
+  return completedLessons.has(id);
 }
 
-function copyText(key) {
-  let text = '';
-  if (key === 'script') {
-    text = `Oi [NOME]! Vi que você quer vender no WhatsApp sem depender de plataforma cara.
-Eu instalo em 2 dias:
-✅ Business Manager blindado + domínio verificado
-✅ WhatsApp Cloud API com seu número (sem chip)
-✅ Pixel + CAPI + Catálogo de e-book
-✅ 1 campanha Advantage+ pra já trazer cliente
-✅ Planilha que mostra de onde veio cada venda
-Investimento: [R$497 / R$997 / R$1.997] — você escolhe o pacote.
-Forma: PIX em 2x ou cartão.
-Prazo: 2 dias úteis pra ficar no ar.
-Posso te mandar um áudio de 30s mostrando como fica por dentro?
-Se fizer sentido, já reservo sua vaga hoje e te entrego amanhã.`;
-  } else if (key.startsWith('code-')) {
-    const id = parseInt(key.split('-')[1]);
-    text = modules.find(m => m.id === id).code;
+// ATUALIZAR BARRA DE PROGRESSO
+function updateProgressBar() {
+  const progress = (completedLessons.size / 7) * 100;
+  document.getElementById('progressBar').style.width = `${progress}%`;
+  document.getElementById('progressText').textContent = `${Math.round(progress)}%`;
+}
+
+// SALVAR PROGRESSO
+function saveProgress() {
+  localStorage.setItem('qebook_progress', JSON.stringify({
+    completedLessons: Array.from(completedLessons),
+    currentModule: currentModule
+  }));
+}
+
+// CARREGAR PROGRESSO
+function loadProgress() {
+  const saved = localStorage.getItem('qebook_progress');
+  if (saved) {
+    const data = JSON.parse(saved);
+    completedLessons = new Set(data.completedLessons || []);
+    if (data.currentModule) {
+      startModule(data.currentModule);
+    }
   }
-  navigator.clipboard.writeText(text).then(() => {
-    const btn = document.getElementById('btn-' + key);
-    if (btn) btn.textContent = 'Copiado!';
-    const toast = document.getElementById('toast');
-    document.getElementById('toastMsg').textContent = 'Copiado!';
-    toast.classList.remove('hidden');
-    toast.classList.add('copy-toast');
+}
+
+// CHAT MENTOR IA
+function toggleChat() {
+  const chatWindow = document.getElementById('chatWindow');
+  chatWindow.classList.toggle('hidden');
+}
+
+function addMentorMessage(text) {
+  const messagesDiv = document.getElementById('chatMessages');
+  const bubble = document.createElement('div');
+  bubble.className = 'chat-bubble flex gap-2';
+  bubble.innerHTML = `
+    <div class="w-8 h-8 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 grid place-items-center font-black text-xs shrink-0">Q</div>
+    <div class="bg-white/10 rounded-xl p-3 text-[13px] leading-6 max-w-[280px]">${text}</div>
+  `;
+  messagesDiv.appendChild(bubble);
+  messagesDiv.scrollTop = messagesDiv.scrollHeight;
+}
+
+function sendMessage() {
+  const input = document.getElementById('chatInput');
+  const message = input.value.trim();
+  if (!message) return;
+
+  // Mensagem do usuário
+  const messagesDiv = document.getElementById('chatMessages');
+  const userBubble = document.createElement('div');
+  userBubble.className = 'chat-bubble flex gap-2 justify-end';
+  userBubble.innerHTML = `
+    <div class="bg-violet-600 rounded-xl p-3 text-[13px] leading-6 max-w-[280px]">${message}</div>
+    <div class="w-8 h-8 rounded-full bg-white/20 grid place-items-center font-bold text-xs shrink-0">Você</div>
+  `;
+  messagesDiv.appendChild(userBubble);
+  input.value = '';
+  messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+  // Resposta do Mentor IA (simulada)
+  setTimeout(() => {
+    const response = getMentorResponse(message);
+    addMentorMessage(response);
+  }, 1000);
+}
+
+function getMentorResponse(message) {
+  const msg = message.toLowerCase();
+  
+  if (msg.includes('token') || msg.includes('verify')) {
+    return "O VERIFY_TOKEN é uma senha que você cria para verificar o webhook. Use algo como: `qebook2025_seguro`. Salve nas variáveis de ambiente da Cloudflare!";
+  }
+  if (msg.includes('pixel') || msg.includes('capi')) {
+    return "Pixel + CAPI juntos = match rate de 95%+. Instale o Pixel no frontend e o CAPI no servidor (via webhook da plataforma de pagamento).";
+  }
+  if (msg.includes('escalar') || msg.includes('escala')) {
+    return "Regra de ouro: aumente 20-30% a cada 48h. NUNCA dobre o orçamento. Duplique o conjunto vencedor, não edite o original.";
+  }
+  if (msg.includes('bloqueio') || msg.includes('ban')) {
+    return "Para evitar bloqueio: 2 fatores ativos, no máximo 2 admins, domínio verificado, e nunca prometa resultados irreais nos anúncios.";
+  }
+  if (msg.includes('roas')) {
+    return "ROAS = Faturamento / Gasto. ROAS 2 = para cada R$1 gasto, volta R$2. Mínimo para escalar: ROAS 2 por 2 dias seguidos.";
+  }
+  if (msg.includes('olá') || msg.includes('oi') || msg.includes('hey')) {
+    return `Olá! Estou aqui para te ajudar com o **Módulo ${currentModule || 1}**. O que você gostaria de saber?`;
+  }
+  
+  return "Boa pergunta! No contexto deste módulo, recomendo revisar o conteúdo acima. Se tiver dúvida específica sobre código, me envie o trecho que te ajuda!";
+}
+
+// COPIAR CÓDIGO
+function copyCode(btn) {
+  const code = btn.closest('.rounded-xl').querySelector('pre').textContent;
+  navigator.clipboard.writeText(code).then(() => {
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Copiado!';
     setTimeout(() => {
-      toast.classList.add('hidden');
-      toast.classList.remove('copy-toast');
-      if (btn) btn.textContent = key === 'script' ? 'Copiar script' : 'Copiar código';
+      btn.innerHTML = originalText;
     }, 2000);
   });
 }
 
-renderModuleList();
-renderModuleContent();
-renderPrices();
-renderFaqs();
+// MOSTRAR TELA DE BOAS-VINDAS
+function showWelcome() {
+  currentModule = null;
+  document.querySelectorAll('.module-content').forEach(el => el.classList.remove('active'));
+  document.getElementById('welcome').classList.add('active');
+  renderModuleList();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ESCAPAR HTML
+function escapeHtml(text) {
+  const div = document.createElement('div');
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+// INICIALIZAR
+init();
 </script>
 </body>
 </html>
-
