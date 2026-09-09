@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Q e-Book — Universidade Completa | Área de Membros</title>
+<title>Q e-Book - Enciclopédia Completa | Do Zero ao Lucro</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/plus-jakarta-sans@5.0.18/index.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@5.0.18/index.min.css">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -20,8 +20,6 @@
   @keyframes slideIn { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: translateX(0); } }
   pre { white-space: pre-wrap; word-break: break-word; }
   .checklist-item input:checked + label { text-decoration: line-through; opacity: 0.6; }
-  .video-placeholder { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
-  .image-placeholder { background: linear-gradient(135deg, #334155 0%, #1e293b 100%); display: flex; align-items: center; justify-content: center; color: #94a3b8; font-size: 14px; border: 2px dashed #475569; }
 </style>
 </head>
 <body class="bg-[#0B1B33] text-white min-h-screen">
@@ -30,568 +28,242 @@
 <header class="sticky top-0 z-50 backdrop-blur-xl bg-[#0B1B33]/90 border-b border-white/10">
   <div class="max-w-[1400px] mx-auto px-6 lg:px-8 h-[72px] flex items-center justify-between">
     <div class="flex items-center gap-3">
-      <div class="relative">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-violet-500/30">
-          <span class="font-black text-[22px]">Q</span>
-        </div>
-        <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-3 h-3 bg-indigo-600 rotate-45"></div>
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-indigo-600 flex items-center justify-center shadow-lg">
+        <span class="font-black text-[22px]">Q</span>
       </div>
-      <div class="leading-none">
+      <div>
         <div class="font-extrabold text-[18px]">Q e-Book</div>
-        <div class="text-[11px] tracking-[0.18em] uppercase text-white/60 font-semibold">Área de Membros</div>
+        <div class="text-[11px] tracking-[0.18em] uppercase text-white/60">Enciclopédia Completa</div>
       </div>
     </div>
     <div class="flex items-center gap-4">
       <div class="hidden md:flex items-center gap-2">
         <div class="text-[12px] text-white/60">Progresso:</div>
         <div class="w-32 h-2 bg-white/10 rounded-full overflow-hidden">
-          <div id="progressBar" class="h-full bg-gradient-to-r from-violet-500 to-indigo-600 transition-all duration-500" style="width: 0%"></div>
+          <div id="progressBar" class="h-full bg-gradient-to-r from-violet-500 to-indigo-600 transition-all" style="width: 0%"></div>
         </div>
         <div id="progressText" class="text-[12px] font-bold text-violet-300">0%</div>
-      </div>
-      <div class="flex items-center gap-2 text-[13px] text-white/60">
-        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 grid place-items-center font-bold text-sm">A</div>
-        <span class="hidden sm:inline">Aluno</span>
       </div>
     </div>
   </div>
 </header>
 
-<!-- MAIN CONTENT -->
+<!-- MAIN -->
 <main class="max-w-[1400px] mx-auto px-6 lg:px-8 py-8">
   <div class="grid lg:grid-cols-[320px_1fr] gap-6">
     
     <!-- SIDEBAR -->
     <aside class="lg:sticky lg:top-[96px] lg:h-[calc(100vh-120px)] overflow-y-auto">
       <div class="rounded-[20px] bg-white/[0.04] border border-white/10 p-4 space-y-2">
-        <div class="text-[11px] tracking-[0.2em] uppercase text-violet-300 font-bold mb-4 px-2">Módulos do Curso</div>
+        <div class="text-[11px] tracking-[0.2em] uppercase text-violet-300 font-bold mb-4">Módulos</div>
         <div id="moduleList"></div>
-      </div>
-      
-      <!-- BOX DE SUPORTE -->
-      <div class="mt-4 rounded-[20px] bg-gradient-to-br from-violet-600/20 to-indigo-600/20 border border-violet-500/30 p-4">
-        <div class="flex items-center gap-2 mb-2">
-          <div class="w-8 h-8 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 grid place-items-center font-black text-sm">Q</div>
-          <div>
-            <div class="font-bold text-sm">Mentor IA Q</div>
-            <div class="text-[11px] text-emerald-400 flex items-center gap-1">
-              <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span> Online 24h
-            </div>
-          </div>
-        </div>
-        <p class="text-[12px] text-white/70 leading-5">Travou em algo? Clique no chat no canto inferior direito e eu te ajudo na hora!</p>
       </div>
     </aside>
 
-    <!-- CONTEÚDO PRINCIPAL -->
-    <div class="min-h-[600px]">
-      
-      <!-- WELCOME SCREEN -->
+    <!-- CONTENT -->
+    <div>
+      <!-- WELCOME -->
       <div id="welcome" class="module-content active">
-        <div class="rounded-[32px] bg-gradient-to-br from-violet-600/20 to-indigo-600/20 border border-violet-500/30 p-8 lg:p-12 relative overflow-hidden">
-          <div class="absolute -top-24 -right-24 w-[400px] h-[400px] bg-gradient-to-br from-violet-600/30 to-indigo-600/30 blur-[100px] rounded-full"></div>
-          <div class="relative">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-400/10 border border-amber-300/30 text-amber-200 text-xs font-bold tracking-wide mb-6">
-              <span class="w-2 h-2 bg-amber-400 rounded-full animate-pulse"></span> BEM-VINDO À SUA ÁREA DE MEMBROS
-            </div>
-            <h1 class="display text-[40px] lg:text-[56px] leading-[0.95] font-bold mb-6">
-              Parabéns! Você está<br>
-              <span class="gradient-text">dentro da Universidade Q</span>
-            </h1>
-            <p class="text-[18px] lg:text-[20px] leading-8 text-white/80 max-w-[700px] mb-8">
-              Em 7 dias, você vai do zero ao profissional completo. Business Manager, WhatsApp Cloud API, Pixel, CAPI, anúncios e escala — tudo com código pronto e eu (Mentor IA Q) te guiando em cada passo.
-            </p>
-            
-            <button onclick="startModule(1)" class="px-8 py-4 rounded-full bg-gradient-to-r from-violet-500 to-indigo-600 font-extrabold text-[16px] shadow-xl shadow-violet-600/40 hover:shadow-violet-600/60 transition flex items-center gap-2">
-              Começar Módulo 01
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </button>
-          </div>
+        <div class="rounded-[32px] bg-gradient-to-br from-violet-600/20 to-indigo-600/20 border border-violet-500/30 p-8 lg:p-12">
+          <h1 class="display text-[40px] lg:text-[56px] leading-[0.95] font-bold mb-6">
+            Bem-vindo à<br><span class="gradient-text">Universidade Q</span>
+          </h1>
+          <p class="text-[18px] leading-8 text-white/80 mb-8">
+            Em 7 dias, do zero ao profissional. Business Manager, WhatsApp Cloud API, Pixel, CAPI e escala — com código pronto e Mentor IA Q guiando cada passo.
+          </p>
+          <button onclick="startModule(1)" class="px-8 py-4 rounded-full bg-gradient-to-r from-violet-500 to-indigo-600 font-extrabold text-[16px] shadow-xl hover:shadow-2xl transition">
+            Começar Módulo 01 →
+          </button>
         </div>
       </div>
 
-      <!-- MÓDULOS (Gerados via JS) -->
+      <!-- MODULES -->
       <div id="modules"></div>
     </div>
   </div>
 </main>
 
-<!-- CHAT MENTOR IA -->
-<div id="chatContainer" class="fixed bottom-6 right-6 z-50">
-  <div id="chatWindow" class="hidden w-[380px] h-[500px] bg-[#0E223F] border border-white/10 rounded-[20px] shadow-2xl flex flex-col overflow-hidden">
+<!-- CHAT -->
+<div class="fixed bottom-6 right-6 z-50">
+  <div id="chatWindow" class="hidden w-[380px] h-[500px] bg-[#0E223F] border border-white/10 rounded-[20px] shadow-2xl flex flex-col">
     <div class="bg-gradient-to-r from-violet-600 to-indigo-600 p-4 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <div class="w-10 h-10 rounded-full bg-white text-[#4F46E5] grid place-items-center font-black">Q</div>
         <div>
           <div class="font-bold">Mentor IA Q</div>
-          <div class="text-[11px] text-white/80 flex items-center gap-1">
-            <span class="w-2 h-2 bg-emerald-400 rounded-full"></span> Online agora
-          </div>
+          <div class="text-[11px] text-white/80"> Online</div>
         </div>
       </div>
-      <button onclick="toggleChat()" class="text-white/80 hover:text-white">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-      </button>
+      <button onclick="toggleChat()" class="text-white/80 hover:text-white">✕</button>
     </div>
     <div id="chatMessages" class="flex-1 overflow-y-auto p-4 space-y-3"></div>
     <div class="p-4 border-t border-white/10">
+      <div class="flex flex-wrap gap-2 mb-3">
+        <button onclick="askQuestion('Como gero token?')" class="px-3 py-1 rounded-full bg-white/10 text-xs hover:bg-white/20">Como gero token?</button>
+        <button onclick="askQuestion('Número novo?')" class="px-3 py-1 rounded-full bg-white/10 text-xs hover:bg-white/20">Número novo?</button>
+        <button onclick="askQuestion('Sou PF')" class="px-3 py-1 rounded-full bg-white/10 text-xs hover:bg-white/20">Sou PF</button>
+        <button onclick="askQuestion('Rastrear venda?')" class="px-3 py-1 rounded-full bg-white/10 text-xs hover:bg-white/20">Rastrear venda?</button>
+      </div>
       <div class="flex gap-2">
-        <input id="chatInput" type="text" placeholder="Pergunte sobre este módulo..." class="flex-1 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm focus:outline-none focus:border-violet-500" onkeypress="if(event.key==='Enter')sendMessage()">
-        <button onclick="sendMessage()" class="px-4 py-2 rounded-full bg-violet-600 hover:bg-violet-700 transition">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
-        </button>
+        <input id="chatInput" type="text" placeholder="Pergunte..." class="flex-1 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm focus:outline-none focus:border-violet-500" onkeypress="if(event.key==='Enter')sendMessage()">
+        <button onclick="sendMessage()" class="px-4 py-2 rounded-full bg-violet-600 hover:bg-violet-700">➤</button>
       </div>
     </div>
   </div>
-  <button onclick="toggleChat()" class="w-14 h-14 rounded-full bg-gradient-to-r from-violet-500 to-indigo-600 shadow-xl shadow-violet-600/40 hover:scale-105 transition flex items-center justify-center">
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  <button onclick="toggleChat()" class="w-14 h-14 rounded-full bg-gradient-to-r from-violet-500 to-indigo-600 shadow-xl hover:scale-105 transition flex items-center justify-center">
+    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
   </button>
 </div>
 
 <script>
-// DADOS DOS 7 MÓDULOS COMPLETOS
+// MÓDULOS COMPLETOS (SEM VÍDEOS EMBUTIDOS)
 const modulesData = [
   {
-    id: 1,
-    title: "Business Manager do Zero",
-    subtitle: "Sua base blindada, sem risco de bloqueio",
-    time: "47 min",
-    color: "from-violet-500 to-indigo-600",
-    icon: "️",
-    videoUrl: "https://www.youtube.com/embed/SEU_VIDEO_ID_1",
+    id: 1, title: "Business Manager do Zero", subtitle: "Sua base blindada, sem risco de bloqueio", time: "47 min", color: "from-violet-500 to-indigo-600", icon: "🛡️",
+    videoLink: "https://www.youtube.com/watch?v=NjpsT1wcyrE", videoCredit: "Invente Comunicação",
     lessons: [
-      { 
-        title: "Criando seu Business Manager", 
-        content: "Acesse business.facebook.com e clique em 'Criar Empresa'. Use o nome oficial da sua empresa (ou seu nome se for MEI). Este será o 'cofre' de todos os seus ativos digitais.",
-        image: "print-bm-criar.png",
-        code: null 
-      },
-      { 
-        title: "Verificando seu domínio", 
-        content: "Vá em Configurações do Negócio → Domínios → Adicionar Domínio. Cole seu domínio (ex: qebook.com.br) e escolha verificação via meta-tag.",
-        image: "print-verificar-dominio.png",
-        code: '<meta name="facebook-domain-verification" content="SEU_CODIGO_AQUI" />' 
-      },
-      { 
-        title: "Adicionando administradores com segurança", 
-        content: "Adicione no máximo 2 administradores. Ative autenticação de 2 fatores em todos. Isso reduz 90% o risco de bloqueio.",
-        image: "print-2fatores.png",
-        code: null 
-      },
-      { 
-        title: "Vinculando Instagram e WhatsApp", 
-        content: "Em Configurações → Contas → Instagram e WhatsApp Business. Vincule ambos ao BM para ter controle total.",
-        image: "print-vincular-contas.png",
-        code: null 
-      }
+      { title: "Criando seu Business Manager", content: "Acesse business.facebook.com e clique em 'Criar Empresa'. Use o nome oficial da sua empresa (ou seu nome se for MEI). Este será o 'cofre' de todos os seus ativos digitais.", code: null },
+      { title: "Verificando seu domínio", content: "Vá em Configurações do Negócio → Domínios → Adicionar Domínio. Cole seu domínio (ex: qebook.com.br) e escolha verificação via meta-tag.", code: '<meta name="facebook-domain-verification" content="SEU_CODIGO_AQUI" />' },
+      { title: "Adicionando administradores com segurança", content: "Adicione no máximo 2 administradores. Ative autenticação de 2 fatores em todos. Isso reduz 90% o risco de bloqueio.", code: null },
+      { title: "Vinculando Instagram e WhatsApp", content: "Em Configurações → Contas → Instagram e WhatsApp Business. Vincule ambos ao BM para ter controle total.", code: null }
     ],
-    checklist: ["BM criado com nome oficial", "Domínio verificado via meta-tag", "2 fatores ativos em todos admins", "Instagram vinculado", "WhatsApp Business vinculado", "Forma de pagamento adicionada"],
-    mentorTips: [
-      "💡 Dica: Use sempre e-mail profissional (não Gmail pessoal) para criar o BM.",
-      "⚠️ Atenção: Nunca adicione mais de 2 admins no início. Meta bloqueia contas com muitos admins novos.",
-      "✅ Pronto: Quando o domínio aparecer como 'Verificado' (bolinha verde), você está seguro."
-    ]
+    checklist: ["BM criado com nome oficial", "Domínio verificado via meta-tag", "2 fatores ativos em todos admins", "Instagram vinculado", "WhatsApp Business vinculado"],
+    mentorTips: [" Use sempre e-mail profissional (não Gmail pessoal) para criar o BM.", "⚠️ Nunca adicione mais de 2 admins no início.", "✅ Quando o domínio aparecer como 'Verificado' (bolinha verde), você está seguro."]
   },
   {
-    id: 2,
-    title: "WhatsApp Cloud API Completo",
-    subtitle: "Seu número na nuvem, sem chip, sem ban",
-    time: "1h 12min",
-    color: "from-emerald-500 to-teal-600",
-    icon: "💬",
-    videoUrl: "https://www.youtube.com/embed/SEU_VIDEO_ID_2",
+    id: 2, title: "WhatsApp Cloud API Completo", subtitle: "Seu número na nuvem, sem chip, sem ban", time: "1h 12min", color: "from-emerald-500 to-teal-600", icon: "💬",
+    videoLink: "https://www.youtube.com/watch?v=SqYPMDxp91Q", videoCredit: "AutomindMAX",
     lessons: [
-      { 
-        title: "Criando App no Meta Developers", 
-        content: "Acesse developers.facebook.com → Meus Apps → Criar App → Tipo: Business → Nome: Q e-Book API. Anote o App ID.",
-        image: "print-meta-developers.png",
-        code: null 
-      },
-      { 
-        title: "Gerando Token de Longa Duração", 
-        content: "Em WhatsApp → Configuração API → Gerar Token. Este token dura 1 ano (na prática, nunca expira se renovado). Salve em local seguro.",
-        image: "print-gerar-token.png",
-        code: "SEU_TOKEN_LONGO_AQUI" 
-      },
-      { 
-        title: "Configurando Webhook na Cloudflare", 
-        content: "Crie um Worker gratuito em workers.cloudflare.com. Cole o código abaixo. Adicione as variáveis: VERIFY_TOKEN, WHATSAPP_TOKEN, SHEET_URL.",
-        image: "print-cloudflare-worker.png",
-        code: `export default {
+      { title: "Criando App no Meta Developers", content: "Acesse developers.facebook.com → Meus Apps → Criar App → Tipo: Business → Nome: Q e-Book API. Anote o App ID.", code: null },
+      { title: "Gerando Token de Longa Duração", content: "Em WhatsApp → Configuração API → Gerar Token. Este token dura 1 ano (na prática, nunca expira se renovado). Salve em local seguro.", code: "SEU_TOKEN_LONGO_AQUI" },
+      { title: "Configurando Webhook na Cloudflare", content: "Crie um Worker gratuito em workers.cloudflare.com. Cole o código abaixo. Adicione as variáveis: VERIFY_TOKEN, WHATSAPP_TOKEN, SHEET_URL.", code: `export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-    
-    // VERIFICAÇÃO DA META
     if (request.method === 'GET') {
       const mode = url.searchParams.get('hub.mode');
       const token = url.searchParams.get('hub.verify_token');
       const challenge = url.searchParams.get('hub.challenge');
-      
       if (mode === 'subscribe' && token === env.VERIFY_TOKEN) {
         return new Response(challenge, { status: 200 });
       }
       return new Response('Forbidden', { status: 403 });
     }
-    
-    // RECEBER MENSAGEM
     if (request.method === 'POST') {
       const body = await request.json();
       const entry = body.entry?.[0]?.changes?.[0]?.value;
       const msg = entry?.messages?.[0];
-      
       if (msg) {
         const from = msg.from;
         const text = msg.text?.body || '';
-        
-        // Salva no Google Sheets
         await fetch(env.SHEET_URL, {
           method: 'POST',
-          body: JSON.stringify({ 
-            telefone: from, 
-            mensagem: text, 
-            data: new Date().toISOString() 
-          }),
+          body: JSON.stringify({ telefone: from, mensagem: text, data: new Date().toISOString() }),
           headers: { 'Content-Type': 'application/json' }
         });
-        
-        // Resposta automática
         await fetch(\`https://graph.facebook.com/v19.0/SEU_PHONE_NUMBER_ID/messages\`, {
           method: 'POST',
-          headers: { 
-            Authorization: \`Bearer \${env.WHATSAPP_TOKEN}\`, 
-            'Content-Type': 'application/json' 
-          },
-          body: JSON.stringify({
-            messaging_product: 'whatsapp',
-            to: from,
-            text: { 
-              body: 'Oi! Recebi sua msg: "' + text + '". Em breve te respondo!' 
-            }
-          })
+          headers: { Authorization: \`Bearer \${env.WHATSAPP_TOKEN}\`, 'Content-Type': 'application/json' },
+          body: JSON.stringify({ messaging_product: 'whatsapp', to: from, text: { body: 'Oi! Recebi sua msg: "' + text + '". Em breve te respondo!' } })
         });
       }
       return new Response('OK', { status: 200 });
     }
     return new Response('Not Found', { status: 404 });
   }
-}` 
-      },
-      { 
-        title: "Conectando seu número", 
-        content: "Em WhatsApp → Configuração API → Adicionar Número de Telefone. Escolha 'Usar número existente' e siga o fluxo de verificação via SMS.",
-        image: "print-conectar-numero.png",
-        code: null 
-      },
-      { 
-        title: "Testando o envio", 
-        content: "Envie uma mensagem para seu próprio número via API. Se receber, está tudo funcionando! Parabéns, você tem WhatsApp Cloud API rodando.",
-        image: "print-teste-mensagem.png",
-        code: null 
-      }
+}` },
+      { title: "Conectando seu número", content: "Em WhatsApp → Configuração API → Adicionar Número de Telefone. Escolha 'Usar número existente' e siga o fluxo de verificação via SMS.", code: null },
+      { title: "Testando o envio", content: "Envie uma mensagem para seu próprio número via API. Se receber, está tudo funcionando! Parabéns, você tem WhatsApp Cloud API rodando.", code: null }
     ],
     checklist: ["App criado no Meta Developers", "Token de longa duração gerado", "Worker Cloudflare criado", "Variáveis de ambiente configuradas", "Webhook verificado pela Meta", "Número conectado", "Mensagem de teste recebida"],
-    mentorTips: [
-      "💡 Dica: O token de 1 ano é REAL. A Meta renovou a política em 2024.",
-      "⚠️ Atenção: Nunca exponha o token no frontend. Use variáveis de ambiente na Cloudflare.",
-      "✅ Pronto: Quando receber a mensagem de teste no seu WhatsApp, está 100% funcional."
-    ]
+    mentorTips: ["💡 O token de 1 ano é REAL. A Meta renovou a política em 2024.", "️ Nunca exponha o token no frontend. Use variáveis de ambiente na Cloudflare.", "✅ Quando receber a mensagem de teste no seu WhatsApp, está 100% funcional."]
   },
   {
-    id: 3,
-    title: "Pixel + Catálogo + CAPI",
-    subtitle: "Rastreamento que a Meta não bloqueia",
-    time: "58 min",
-    color: "from-blue-500 to-cyan-600",
-    icon: "📊",
-    videoUrl: "https://www.youtube.com/embed/SEU_VIDEO_ID_3",
+    id: 3, title: "Pixel + Catálogo + CAPI", subtitle: "Rastreamento que a Meta não bloqueia", time: "58 min", color: "from-blue-500 to-cyan-600", icon: "📊",
+    videoLink: "https://www.youtube.com/watch?v=ViqVotRhBVA", videoCredit: "Gabriel Chabalas",
     lessons: [
-      { 
-        title: "Instalando o Pixel Base", 
-        content: "Event Manager → Conectar nova fonte → Web → Pixel → Instalação manual. Copie o código base e cole no <head> do seu site.",
-        image: "print-pixel-install.png",
-        code: `<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', 'SEU_PIXEL_ID');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"
-/></noscript>` 
-      },
-      { 
-        title: "Configurando eventos avançados", 
-        content: "Adicione eventos específicos: ViewContent (quando vê produto), Lead (quando preenche formulário), Purchase (quando compra).",
-        image: "print-eventos-pixel.png",
-        code: `// Evento de visualização de conteúdo
-fbq('track', 'ViewContent', {
-  content_name: 'Q e-Book - Edição Definitiva',
-  content_category: 'E-Book',
-  value: 997,
-  currency: 'BRL'
-});
-
-// Evento de Lead
-fbq('track', 'Lead', {
-  content_name: 'Formulário de contato',
-  value: 0,
-  currency: 'BRL'
-});
-
-// Evento de Compra
-fbq('track', 'Purchase', {
-  content_name: 'Q e-Book - Edição Definitiva',
-  value: 997,
-  currency: 'BRL',
-  transaction_id: 'PEDIDO_123'
-});` 
-      },
-      { 
-        title: "Criando Catálogo de produtos", 
-        content: "Catálogo → Criar Catálogo → E-commerce. Upload de feed CSV com seus produtos. Sim, e-books contam como produtos físicos!",
-        image: "print-catalogo.png",
-        code: null 
-      },
-      { 
-        title: "Configurando CAPI (API de Conversões)", 
-        content: "CAPI envia dados direto do servidor (não do navegador). Use Google Tag Manager Server-Side ou webhook da plataforma de pagamento.",
-        image: "print-capi-setup.png",
-        code: `// CAPI - Envio via servidor (exemplo Node.js)
-const axios = require('axios');
-
-async function sendPurchaseEvent(customerData) {
-  const payload = {
-    data: [{
-      event_name: 'Purchase',
-      event_time: Math.floor(Date.now() / 1000),
-      action_source: 'website',
-      user_data: {
-        em: [hashSHA256(customerData.email)],
-        ph: [hashSHA256(customerData.phone)],
-        fn: [hashSHA256(customerData.firstName)],
-        ln: [hashSHA256(customerData.lastName)]
-      },
-      custom_data: {
-        value: 997,
-        currency: 'BRL',
-        content_name: 'Q e-Book - Edição Definitiva',
-        content_ids: ['ebook_definitiva_2025']
-      }
-    }]
-  };
-
-  const response = await axios.post(
-    'https://graph.facebook.com/v19.0/SEU_PIXEL_ID/events?access_token=SEU_TOKEN_CAPI',
-    payload
-  );
-
-  return response.data;
-}` 
-      }
+      { title: "Instalando o Pixel Base", content: "Event Manager → Conectar nova fonte → Web → Pixel → Instalação manual. Copie o código base e cole no <head> do seu site.", code: `<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', 'SEU_PIXEL_ID');fbq('track', 'PageView');
+</script>` },
+      { title: "Configurando eventos avançados", content: "Adicione eventos específicos: ViewContent (quando vê produto), Lead (quando preenche formulário), Purchase (quando compra).", code: `fbq('track', 'ViewContent', { content_name: 'Produto X', value: 97, currency: 'BRL' });
+fbq('track', 'Purchase', { content_name: 'Produto X', value: 97, currency: 'BRL', transaction_id: 'PEDIDO_123' });` },
+      { title: "Criando Catálogo de produtos", content: "Catálogo → Criar Catálogo → E-commerce. Upload de feed CSV com seus produtos.", code: null },
+      { title: "Configurando CAPI (API de Conversões)", content: "CAPI envia dados direto do servidor (não do navegador). Use Google Tag Manager Server-Side ou webhook da plataforma de pagamento.", code: `// CAPI - Envio via servidor
+const payload = {
+  data: [{
+    event_name: 'Purchase',
+    event_time: Math.floor(Date.now() / 1000),
+    user_data: { em: [hashSHA256(email)], ph: [hashSHA256(phone)] },
+    custom_data: { value: 97, currency: 'BRL' }
+  }]
+};` }
     ],
-    checklist: ["Pixel instalado no site", "Evento PageView disparando", "Evento ViewContent configurado", "Evento Purchase configurado", "Catálogo criado", "Feed CSV enviado", "CAPI com match rate > 85%"],
-    mentorTips: [
-      "💡 Dica: CAPI + Pixel juntos = match rate de 95%+. Só Pixel = 60-70%.",
-      "️ Atenção: Hash SHA256 dos dados do cliente é OBRIGATÓRIO no CAPI.",
-      "✅ Pronto: Quando o Event Manager mostrar 'Ativo' nos 3 eventos, está perfeito."
-    ]
+    checklist: ["Pixel instalado no site", "Evento PageView disparando", "Evento ViewContent configurado", "Evento Purchase configurado", "Catálogo criado", "CAPI com match rate > 85%"],
+    mentorTips: ["💡 CAPI + Pixel juntos = match rate de 95%+. Só Pixel = 60-70%.", "⚠️ Hash SHA256 dos dados do cliente é OBRIGATÓRIO no CAPI.", "✅ Quando o Event Manager mostrar 'Ativo' nos 3 eventos, está perfeito."]
   },
   {
-    id: 4,
-    title: "Anúncios que Vendem",
-    subtitle: "Advantage+ e Click to WhatsApp sem queimar dinheiro",
-    time: "1h 24min",
-    color: "from-fuchsia-500 to-purple-600",
-    icon: "🎯",
-    videoUrl: "https://www.youtube.com/embed/SEU_VIDEO_ID_4",
+    id: 4, title: "Anúncios que Vendem", subtitle: "Advantage+ e Click to WhatsApp sem queimar dinheiro", time: "1h 24min", color: "from-fuchsia-500 to-purple-600", icon: "🎯",
+    videoLink: "https://www.youtube.com/watch?v=qErW3jyQ3DY", videoCredit: "Adriano Gianini",
     lessons: [
-      { 
-        title: "Estrutura 1-3-3 validada", 
-        content: "1 campanha, 3 conjuntos de anúncio, 3 criativos cada. Orçamento inicial: R$30/dia. Esta é a estrutura mais testada e aprovada.",
-        image: "print-estrutura-133.png",
-        code: null 
-      },
-      { 
-        title: "Configurando Advantage+", 
-        content: "Advantage+ é a IA da Meta que otimiza tudo: público, criativo, posicionamento. Ative em: Campanha → Advantage+ Shopping Campaign.",
-        image: "print-advantage-plus.png",
-        code: null 
-      },
-      { 
-        title: "Criando anúncio Click to WhatsApp", 
-        content: "Objetivo: Mensagens → WhatsApp. Criativo: Vídeo 9:16 de 15-30s com legenda queimada. CTA: Enviar mensagem.",
-        image: "print-click-whatsapp.png",
-        code: null 
-      },
-      { 
-        title: "Regras automáticas de proteção", 
-        content: "Crie regras para pausar anúncios caros automaticamente. Ex: Se CPA > R$45 em 2 dias, pausar conjunto.",
-        image: "print-regras-automaticas.png",
-        code: null 
-      }
+      { title: "Estrutura 1-3-3 validada", content: "1 campanha, 3 conjuntos de anúncio, 3 criativos cada. Orçamento inicial: R$30/dia. Esta é a estrutura mais testada e aprovada.", code: null },
+      { title: "Configurando Advantage+", content: "Advantage+ é a IA da Meta que otimiza tudo: público, criativo, posicionamento. Ative em: Campanha → Advantage+ Shopping Campaign.", code: null },
+      { title: "Criando anúncio Click to WhatsApp", content: "Objetivo: Mensagens → WhatsApp. Criativo: Vídeo 9:16 de 15-30s com legenda queimada. CTA: Enviar mensagem.", code: null },
+      { title: "Regras automáticas de proteção", content: "Crie regras para pausar anúncios caros automaticamente. Ex: Se CPA > R$45 em 2 dias, pausar conjunto.", code: null }
     ],
     checklist: ["Campanha criada com objetivo correto", "3 conjuntos configurados", "3 criativos por conjunto", "Advantage+ ativado", "CTA WhatsApp configurado", "Regra automática de CPA criada"],
-    mentorTips: [
-      "💡 Dica: Vídeos UGC (User Generated Content) convertem 3x mais que vídeos produzidos.",
-      "⚠️ Atenção: Nunca edite um anúncio ativo. Duplique e pause o original.",
-      "✅ Pronto: Quando tiver 3 vendas com ROAS > 2, está na hora de escalar."
-    ]
+    mentorTips: [" Vídeos UGC (User Generated Content) convertem 3x mais que vídeos produzidos.", "⚠️ Nunca edite um anúncio ativo. Duplique e pause o original.", "✅ Quando tiver 3 vendas com ROAS > 2, está na hora de escalar."]
   },
   {
-    id: 5,
-    title: "Rastrear Quem Comprou",
-    subtitle: "UTM + Google Sheets que fala a verdade",
-    time: "52 min",
-    color: "from-amber-500 to-orange-600",
-    icon: "📈",
-    videoUrl: "https://www.youtube.com/embed/SEU_VIDEO_ID_5",
+    id: 5, title: "Rastrear Quem Comprou", subtitle: "UTM + Google Sheets que fala a verdade", time: "52 min", color: "from-amber-500 to-orange-600", icon: "📈",
+    videoLink: "https://www.youtube.com/watch?v=raAGNniqjPI", videoCredit: "Pedro Sobral",
     lessons: [
-      { 
-        title: "Criando links UTM rastreáveis", 
-        content: "Use UTM Builder para saber de qual anúncio veio cada venda. Parâmetros: utm_source, utm_medium, utm_campaign, utm_content.",
-        image: "print-utm-builder.png",
-        code: `// Builder UTM - use sempre
-const meuLink = \`https://SEU_DOMINIO.com/checkout?utm_source=meta&utm_medium=cpc&utm_campaign=q_definitiva&utm_content=\${nomeDoCriativo}&utm_term=\${idadePublico}\`;
-
-// Exemplo prático:
-const linkVideo1 = 'https://qebook.com/checkout?utm_source=meta&utm_medium=cpc&utm_campaign=q_definitiva&utm_content=video_depoimento_01&utm_term=35_65';
-
-const linkVideo2 = 'https://qebook.com/checkout?utm_source=meta&utm_medium=cpc&utm_campaign=q_definitiva&utm_content=video_tela_curso_02&utm_term=35_65';` 
-      },
-      { 
-        title: "Automação Kiwify/Hotmart → Sheets", 
-        content: "Use Zapier ou Make para: quando houver nova venda → adicionar linha no Google Sheets → enviar WhatsApp com acesso.",
-        image: "print-automacao-zapier.png",
-        code: null 
-      },
-      { 
-        title: "Dashboard de ROAS no Looker Studio", 
-        content: "Conecte seu Google Sheets ao Looker Studio (grátis). Crie gráficos: Vendas por campanha, ROAS por criativo, CPA por público.",
-        image: "print-looker-dashboard.png",
-        code: null 
-      }
+      { title: "Criando links UTM rastreáveis", content: "Use UTM Builder para saber de qual anúncio veio cada venda. Parâmetros: utm_source, utm_medium, utm_campaign, utm_content.", code: `const link = 'https://seudominio.com/checkout?utm_source=meta&utm_medium=cpc&utm_campaign=q_definitiva&utm_content=video_01';` },
+      { title: "Automação Kiwify/Hotmart → Sheets", content: "Use Zapier ou Make para: quando houver nova venda → adicionar linha no Google Sheets → enviar WhatsApp com acesso.", code: null },
+      { title: "Dashboard de ROAS no Looker Studio", content: "Conecte seu Google Sheets ao Looker Studio (grátis). Crie gráficos: Vendas por campanha, ROAS por criativo, CPA por público.", code: null }
     ],
     checklist: ["UTM em todos os links de anúncio", "Automação de venda → Sheets funcionando", "WhatsApp de boas-vindas enviado", "Dashboard Looker Studio criado", "ROAS calculado corretamente"],
-    mentorTips: [
-      " Dica: Teste a automação com uma compra de R$1 antes de escalar.",
-      "⚠️ Atenção: Sem UTM, você voa às cegas. Sempre use UTM.",
-      "✅ Pronto: Quando o dashboard mostrar lucro real (não faturamento), está no controle."
-    ]
+    mentorTips: ["💡 Teste a automação com uma compra de R$1 antes de escalar.", "⚠️ Sem UTM, você voa às cegas. Sempre use UTM.", "✅ Quando o dashboard mostrar lucro real (não faturamento), está no controle."]
   },
   {
-    id: 6,
-    title: "Como Pagar a Meta",
-    subtitle: "PIX, cartão e como nunca ficar sem conta",
-    time: "38 min",
-    color: "from-slate-500 to-gray-700",
-    icon: "💳",
-    videoUrl: "https://www.youtube.com/embed/SEU_VIDEO_ID_6",
+    id: 6, title: "Como Pagar a Meta", subtitle: "PIX, cartão e como nunca ficar sem conta", time: "38 min", color: "from-slate-500 to-gray-700", icon: "💳",
+    videoLink: "https://www.youtube.com/watch?v=S-XLA1PRd5E", videoCredit: "Rodrigo Alves Conecta",
     lessons: [
-      { 
-        title: "Configurando PIX na Meta", 
-        content: "Cobrança → Adicionar forma de pagamento → PIX. Gere QR Code e pague em até 10 minutos. Limite inicial: R$150/dia.",
-        image: "print-pix-meta.png",
-        code: null 
-      },
-      { 
-        title: "Cartões que a Meta aceita", 
-        content: "Cartões virtuais (Nubank, Inter, Wise) funcionam melhor. Tenha 2 cartões: principal + backup. Limite diário: R$200 no início.",
-        image: "print-cartoes-meta.png",
-        code: null 
-      },
-      { 
-        title: "O que fazer quando a conta cai", 
-        content: "Central de Contas → Qualidade da Conta → Solicitar Análise. Use o modelo de texto abaixo. 90% das contas são reativadas em 24-48h.",
-        image: "print-solicitar-analise.png",
-        code: `"Olá equipe Meta,
+      { title: "Configurando PIX na Meta", content: "Cobrança → Adicionar forma de pagamento → PIX. Gere QR Code e pague em até 10 minutos. Limite inicial: R$150/dia.", code: null },
+      { title: "Cartões que a Meta aceita", content: "Cartões virtuais (Nubank, Inter, Wise) funcionam melhor. Tenha 2 cartões: principal + backup. Limite diário: R$200 no início.", code: null },
+      { title: "O que fazer quando a conta cai", content: "Central de Contas → Qualidade da Conta → Solicitar Análise. Use o modelo de texto abaixo. 90% das contas são reativadas em 24-48h.", code: `"Olá equipe Meta,
 
-Minha empresa Q e-Book - SEU_DOMINIO.com.br vende e-books educacionais sobre marketing digital.
+Minha empresa vende e-books educacionais sobre marketing digital.
 
 Todos os meus anúncios seguem as políticas, sem promessas irreais.
 
-Meu domínio SEU_DOMINIO.com.br está verificado e meu CNPJ é SEU_CNPJ.
+Meu domínio está verificado e meu CNPJ é SEU_CNPJ.
 
-Meu site possui política de privacidade e termos em SEU_DOMINIO.com.br/privacidade.
-
-Solicito revisão humanizada. Obrigado!"` 
-      }
+Solicito revisão humanizada. Obrigado!"` }
     ],
     checklist: ["PIX testado com sucesso", "2 cartões cadastrados", "Limite diário configurado", "Documento de recurso salvo"],
-    mentorTips: [
-      "💡 Dica: Pague o PIX em até 10 min. Depois disso, expira e precisa gerar novo.",
-      "⚠️ Atenção: Nunca deixe a conta zerar. Meta bloqueia contas inadimplentes.",
-      "✅ Pronto: Quando tiver 2 formas de pagamento ativas, está blindado."
-    ]
+    mentorTips: ["💡 Pague o PIX em até 10 min. Depois disso, expira e precisa gerar novo.", "⚠️ Nunca deixe a conta zerar. Meta bloqueia contas inadimplentes.", "✅ Quando tiver 2 formas de pagamento ativas, está blindado."]
   },
   {
-    id: 7,
-    title: "Escalar e Lucrar",
-    subtitle: "De R$30/dia para R$300/dia com lucro",
-    time: "1h 05min",
-    color: "from-violet-600 to-indigo-800",
-    icon: "🚀",
-    videoUrl: "https://www.youtube.com/embed/SEU_VIDEO_ID_7",
+    id: 7, title: "Escalar e Lucrar", subtitle: "De R$30/dia para R$300/dia com lucro", time: "1h 05min", color: "from-violet-600 to-indigo-800", icon: "🚀",
+    videoLink: "https://www.youtube.com/watch?v=_6fwtXqia4c", videoCredit: "Odam Sousa",
     lessons: [
-      { 
-        title: "Quando escalar: o sinal verde", 
-        content: "3 vendas com ROAS > 2 por 2 dias seguidos = sinal verde. Antes disso, otimize. Depois disso, escale com confiança.",
-        image: "print-sinal-verde.png",
-        code: `// Calculadora de ROAS
-function deveEscalar(gasto, faturamento, dias) {
+      { title: "Quando escalar: o sinal verde", content: "3 vendas com ROAS > 2 por 2 dias seguidos = sinal verde. Antes disso, otimize. Depois disso, escale com confiança.", code: `function deveEscalar(gasto, faturamento, dias) {
   const roas = faturamento / gasto;
-  const vendasPorDia = faturamento / 997 / dias;
-  
-  if (roas >= 2 && dias >= 2 && vendasPorDia >= 1.5) {
-    return "✅ ESCALAR +20% a cada 48h";
-  }
-  if (roas < 1.5) {
-    return "⛔ OTIMIZAR criativo e público";
-  }
-  return "⏳ AGUARDAR mais 24h de dados";
-}
-
-// Exemplo de uso:
-const resultado = deveEscalar(300, 900, 3);
-console.log(resultado); // "✅ ESCALAR +20% a cada 48h"` 
-      },
-      { 
-        title: "Criando públicos Lookalike", 
-        content: "Públicos → Criar público → Lookalike → Origem: Compradores últimos 60 dias → 1%. Este é o público mais poderoso da Meta.",
-        image: "print-lookalike.png",
-        code: null 
-      },
-      { 
-        title: "Remarketing inteligente", 
-        content: "Crie 3 públicos de remarketing: 7 dias (quente), 14 dias (morno), 30 dias (frio). Anúncios diferentes para cada um.",
-        image: "print-remarketing.png",
-        code: null 
-      },
-      { 
-        title: "Regra de ouro da escala", 
-        content: "Aumente 20-30% a cada 48h. NUNCA dobre o orçamento. Duplique o conjunto vencedor, não edite o original.",
-        image: "print-escala-20porcento.png",
-        code: null 
-      }
+  if (roas >= 2 && dias >= 2) return "✅ ESCALAR +20% a cada 48h";
+  if (roas < 1.5) return "⛔ OTIMIZAR criativo e público";
+  return "⏳ AGUARDAR mais 24h";
+}` },
+      { title: "Criando públicos Lookalike", content: "Públicos → Criar público → Lookalike → Origem: Compradores últimos 60 dias → 1%. Este é o público mais poderoso da Meta.", code: null },
+      { title: "Remarketing inteligente", content: "Crie 3 públicos de remarketing: 7 dias (quente), 14 dias (morno), 30 dias (frio). Anúncios diferentes para cada um.", code: null },
+      { title: "Regra de ouro da escala", content: "Aumente 20-30% a cada 48h. NUNCA dobre o orçamento. Duplique o conjunto vencedor, não edite o original.", code: null }
     ],
     checklist: ["Lookalike 1% criado", "Remarketing 7d ativo", "Remarketing 14d ativo", "Remarketing 30d ativo", "Regra de escala configurada", "ROAS > 2 por 2 dias"],
-    mentorTips: [
-      "💡 Dica: Semana 1: R$30/dia. Semana 2: R$90/dia. Semana 3: R$180/dia. Semana 4: R$300/dia.",
-      "⚠️ Atenção: Escalar rápido demais = queimar dinheiro. Respeite o ritmo de 20% a cada 48h.",
-      "✅ Pronto: Com ROAS 2.5 e R$300/dia, você lucra R$450/dia = R$13.500/mês."
-    ]
+    mentorTips: ["💡 Semana 1: R$30/dia. Semana 2: R$90/dia. Semana 3: R$180/dia. Semana 4: R$300/dia.", "⚠️ Escalar rápido demais = queimar dinheiro. Respeite o ritmo de 20% a cada 48h.", "✅ Com ROAS 2.5 e R$300/dia, você lucra R$450/dia = R$13.500/mês."]
   }
 ];
 
-// ESTADO DA APLICAÇÃO
+// ESTADO
 let currentModule = null;
 let completedLessons = new Set();
-let chatHistory = [];
 
 // INICIALIZAÇÃO
 function init() {
@@ -601,21 +273,18 @@ function init() {
   updateProgressBar();
 }
 
-// RENDERIZAR LISTA DE MÓDULOS
+// RENDERIZAR LISTA
 function renderModuleList() {
   const list = document.getElementById('moduleList');
   list.innerHTML = modulesData.map(m => {
-    const isCompleted = isModuleCompleted(m.id);
+    const isCompleted = completedLessons.has(m.id);
     const isActive = currentModule === m.id;
     return `
       <button onclick="startModule(${m.id})" class="w-full text-left rounded-xl p-3 flex gap-3 transition ${isActive ? 'bg-gradient-to-r from-violet-600 to-indigo-600 shadow-lg' : 'hover:bg-white/[0.06]'}">
-        <div class="w-10 h-10 rounded-lg bg-gradient-to-br ${m.color} grid place-items-center text-xl shrink-0">
-          ${m.icon}
-        </div>
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br ${m.color} grid place-items-center text-xl">${m.icon}</div>
         <div class="min-w-0 flex-1">
-          <div class="text-[11px] tracking-wide uppercase opacity-70">Módulo ${m.id} • ${m.time}</div>
-          <div class="font-bold leading-tight truncate">${m.title}</div>
-          <div class="text-[11px] opacity-70 leading-tight truncate mt-0.5">${m.subtitle}</div>
+          <div class="text-[11px] uppercase opacity-70">Módulo ${m.id} • ${m.time}</div>
+          <div class="font-bold text-sm truncate">${m.title}</div>
           ${isCompleted ? '<div class="text-[10px] text-emerald-400 font-bold mt-1">✓ Concluído</div>' : ''}
         </div>
       </button>
@@ -623,7 +292,7 @@ function renderModuleList() {
   }).join('');
 }
 
-// RENDERIZAR MÓDULOS
+// RENDERIZAR MÓDULOS (SEM VÍDEOS EMBUTIDOS)
 function renderModules() {
   const container = document.getElementById('modules');
   container.innerHTML = modulesData.map(m => `
@@ -633,29 +302,13 @@ function renderModules() {
         <div class="p-6 lg:p-8">
           <div class="flex flex-wrap items-start justify-between gap-4 mb-6">
             <div>
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/10 text-[11px] tracking-widest uppercase mb-3">
-                Módulo ${m.id} • ${m.time}
-              </div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[11px] uppercase mb-3">Módulo ${m.id} • ${m.time}</div>
               <h2 class="display text-[32px] leading-[1.05]">${m.title}</h2>
               <p class="text-white/60 mt-1">${m.subtitle}</p>
             </div>
-            <button onclick="markModuleComplete(${m.id})" class="px-4 py-2 rounded-full bg-emerald-500/20 text-emerald-300 text-sm font-bold flex items-center gap-2 hover:bg-emerald-500/30 transition">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Marcar como concluído
+            <button onclick="markModuleComplete(${m.id})" class="px-4 py-2 rounded-full bg-emerald-500/20 text-emerald-300 text-sm font-bold hover:bg-emerald-500/30 transition">
+              ✓ Marcar como concluído
             </button>
-          </div>
-
-          <!-- VÍDEO AULA -->
-          <div class="rounded-2xl overflow-hidden border border-white/10 mb-8">
-            <div class="aspect-video video-placeholder relative">
-              <iframe 
-                src="${m.videoUrl}" 
-                class="absolute inset-0 w-full h-full"
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-              </iframe>
-            </div>
           </div>
 
           <!-- LIÇÕES -->
@@ -663,34 +316,15 @@ function renderModules() {
             ${m.lessons.map((lesson, idx) => `
               <div class="rounded-xl bg-white/[0.04] border border-white/10 p-5">
                 <div class="flex items-start gap-3 mb-3">
-                  <div class="w-8 h-8 rounded-full bg-gradient-to-br ${m.color} grid place-items-center font-bold text-sm shrink-0">
-                    ${idx + 1}
-                  </div>
+                  <div class="w-8 h-8 rounded-full bg-gradient-to-br ${m.color} grid place-items-center font-bold text-sm">${idx + 1}</div>
                   <h3 class="font-bold text-lg">${lesson.title}</h3>
                 </div>
                 <p class="text-[15px] leading-7 text-white/80 ml-11 mb-4">${lesson.content}</p>
-                
-                ${lesson.image ? `
-                  <div class="ml-11 mb-4">
-                    <div class="text-[12px] text-violet-300 font-bold mb-2">📸 Print de referência:</div>
-                    <div class="rounded-lg image-placeholder border border-white/10 p-8 text-center">
-                      <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mx-auto mb-2 opacity-50"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-                        <div class="text-sm">Substitua por: <code class="px-2 py-1 rounded bg-white/10">${lesson.image}</code></div>
-                        <div class="text-xs mt-1 opacity-70">Coloque a imagem na pasta /images</div>
-                      </div>
-                    </div>
-                  </div>
-                ` : ''}
-                
                 ${lesson.code ? `
                   <div class="ml-11">
                     <div class="flex items-center justify-between mb-2">
                       <span class="text-[12px] text-violet-300 font-bold">Código pronto:</span>
-                      <button onclick="copyCode(this)" class="px-3 py-1 rounded-full bg-white text-[#0B1B33] text-xs font-bold flex items-center gap-1.5 hover:bg-white/90">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-                        Copiar
-                      </button>
+                      <button onclick="copyCode(this)" class="px-3 py-1 rounded-full bg-white text-[#0B1B33] text-xs font-bold hover:bg-white/90">📋 Copiar</button>
                     </div>
                     <pre class="rounded-lg bg-[#070F1F] border border-white/10 p-4 text-[12px] leading-6 overflow-x-auto">${escapeHtml(lesson.code)}</pre>
                   </div>
@@ -701,52 +335,32 @@ function renderModules() {
 
           <!-- CHECKLIST -->
           <div class="rounded-xl bg-emerald-500/10 border border-emerald-500/20 p-5 mb-6">
-            <h3 class="font-bold text-emerald-200 mb-3 flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-              Checklist do Módulo
-            </h3>
+            <h3 class="font-bold text-emerald-200 mb-3">✓ Checklist do Módulo</h3>
             <div class="space-y-2">
               ${m.checklist.map((item, idx) => `
                 <div class="checklist-item flex items-center gap-3">
-                  <input type="checkbox" id="check-${m.id}-${idx}" class="w-5 h-5 rounded border-white/30 bg-white/10 text-emerald-500 focus:ring-emerald-500" onchange="updateChecklist(${m.id})">
+                  <input type="checkbox" id="check-${m.id}-${idx}" class="w-5 h-5 rounded" onchange="saveProgress()">
                   <label for="check-${m.id}-${idx}" class="text-[14px] text-white/90 cursor-pointer">${item}</label>
                 </div>
               `).join('')}
             </div>
           </div>
 
-          <!-- DICAS DO MENTOR -->
+          <!-- DICAS -->
           <div class="rounded-xl bg-violet-500/10 border border-violet-500/20 p-5">
             <h3 class="font-bold text-violet-200 mb-3 flex items-center gap-2">
               <div class="w-6 h-6 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 grid place-items-center text-xs font-black">Q</div>
               Dicas do Mentor IA Q
             </h3>
             <div class="space-y-2">
-              ${m.mentorTips.map(tip => `
-                <div class="text-[14px] text-white/90 leading-6">${tip}</div>
-              `).join('')}
+              ${m.mentorTips.map(tip => `<div class="text-[14px] text-white/90 leading-6">${tip}</div>`).join('')}
             </div>
           </div>
 
           <!-- NAVEGAÇÃO -->
           <div class="mt-8 flex justify-between">
-            ${m.id > 1 ? `
-              <button onclick="startModule(${m.id - 1})" class="px-6 py-3 rounded-full bg-white/10 border border-white/20 font-semibold hover:bg-white/15 transition flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-                Módulo Anterior
-              </button>
-            ` : '<div></div>'}
-            ${m.id < 7 ? `
-              <button onclick="startModule(${m.id + 1})" class="px-6 py-3 rounded-full bg-gradient-to-r from-violet-500 to-indigo-600 font-bold hover:shadow-lg transition flex items-center gap-2">
-                Próximo Módulo
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-              </button>
-            ` : `
-              <button onclick="showWelcome()" class="px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 font-bold hover:shadow-lg transition flex items-center gap-2">
-                Voltar ao Início
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-              </button>
-            `}
+            ${m.id > 1 ? `<button onclick="startModule(${m.id - 1})" class="px-6 py-3 rounded-full bg-white/10 border border-white/20 font-semibold hover:bg-white/15 transition">← Módulo Anterior</button>` : '<div></div>'}
+            ${m.id < 7 ? `<button onclick="startModule(${m.id + 1})" class="px-6 py-3 rounded-full bg-gradient-to-r from-violet-500 to-indigo-600 font-bold hover:shadow-lg transition">Próximo Módulo →</button>` : `<button onclick="showWelcome()" class="px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 font-bold">Voltar ao Início</button>`}
           </div>
         </div>
       </div>
@@ -754,19 +368,16 @@ function renderModules() {
   `).join('');
 }
 
-// INICIAR MÓDULO
+// FUNÇÕES
 function startModule(id) {
   currentModule = id;
   document.querySelectorAll('.module-content').forEach(el => el.classList.remove('active'));
   document.getElementById(`module-${id}`).classList.add('active');
   renderModuleList();
   window.scrollTo({ top: 0, behavior: 'smooth' });
-  
-  // Mensagem do Mentor IA
   addMentorMessage(`Olá! Sou o Mentor IA Q. Estou aqui para te guiar no **Módulo ${id}: ${modulesData[id-1].title}**. Qualquer dúvida, é só perguntar! 🚀`);
 }
 
-// MARCAR MÓDULO COMO CONCLUÍDO
 function markModuleComplete(id) {
   completedLessons.add(id);
   saveProgress();
@@ -775,59 +386,40 @@ function markModuleComplete(id) {
   addMentorMessage(`Parabéns! Você concluiu o **Módulo ${id}**! 🎉 ${id < 7 ? 'Pronto para o próximo?' : 'Você completou todo o curso! Está pronto para vender!'}`);
 }
 
-// ATUALIZAR CHECKLIST
-function updateChecklist(moduleId) {
-  saveProgress();
-}
-
-// VERIFICAR SE MÓDULO ESTÁ CONCLUÍDO
-function isModuleCompleted(id) {
-  return completedLessons.has(id);
-}
-
-// ATUALIZAR BARRA DE PROGRESSO
 function updateProgressBar() {
   const progress = (completedLessons.size / 7) * 100;
   document.getElementById('progressBar').style.width = `${progress}%`;
   document.getElementById('progressText').textContent = `${Math.round(progress)}%`;
 }
 
-// SALVAR PROGRESSO
 function saveProgress() {
-  localStorage.setItem('qebook_progress', JSON.stringify({
-    completedLessons: Array.from(completedLessons),
-    currentModule: currentModule
-  }));
+  localStorage.setItem('qebook_progress', JSON.stringify({ completedLessons: Array.from(completedLessons), currentModule }));
 }
 
-// CARREGAR PROGRESSO
 function loadProgress() {
   const saved = localStorage.getItem('qebook_progress');
   if (saved) {
     const data = JSON.parse(saved);
     completedLessons = new Set(data.completedLessons || []);
-    if (data.currentModule) {
-      startModule(data.currentModule);
-    }
+    if (data.currentModule) startModule(data.currentModule);
   }
 }
 
-// CHAT MENTOR IA
-function toggleChat() {
-  const chatWindow = document.getElementById('chatWindow');
-  chatWindow.classList.toggle('hidden');
-}
+// CHAT
+function toggleChat() { document.getElementById('chatWindow').classList.toggle('hidden'); }
 
 function addMentorMessage(text) {
   const messagesDiv = document.getElementById('chatMessages');
   const bubble = document.createElement('div');
   bubble.className = 'chat-bubble flex gap-2';
-  bubble.innerHTML = `
-    <div class="w-8 h-8 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 grid place-items-center font-black text-xs shrink-0">Q</div>
-    <div class="bg-white/10 rounded-xl p-3 text-[13px] leading-6 max-w-[280px]">${text}</div>
-  `;
+  bubble.innerHTML = `<div class="w-8 h-8 rounded-full bg-gradient-to-br from-violet-500 to-indigo-600 grid place-items-center font-black text-xs">Q</div><div class="bg-white/10 rounded-xl p-3 text-[13px] leading-6 max-w-[280px]">${text}</div>`;
   messagesDiv.appendChild(bubble);
   messagesDiv.scrollTop = messagesDiv.scrollHeight;
+}
+
+function askQuestion(question) {
+  document.getElementById('chatInput').value = question;
+  sendMessage();
 }
 
 function sendMessage() {
@@ -835,36 +427,29 @@ function sendMessage() {
   const message = input.value.trim();
   if (!message) return;
 
-  // Mensagem do usuário
   const messagesDiv = document.getElementById('chatMessages');
-  const userBubble = document.createElement('div');
-  userBubble.className = 'chat-bubble flex gap-2 justify-end';
-  userBubble.innerHTML = `
-    <div class="bg-violet-600 rounded-xl p-3 text-[13px] leading-6 max-w-[280px]">${message}</div>
-    <div class="w-8 h-8 rounded-full bg-white/20 grid place-items-center font-bold text-xs shrink-0">Você</div>
-  `;
-  messagesDiv.appendChild(userBubble);
+  messagesDiv.innerHTML += `<div class="chat-bubble flex gap-2 justify-end"><div class="bg-violet-600 rounded-xl p-3 text-[13px] leading-6 max-w-[280px]">${message}</div><div class="w-8 h-8 rounded-full bg-white/20 grid place-items-center font-bold text-xs">Você</div></div>`;
   input.value = '';
   messagesDiv.scrollTop = messagesDiv.scrollHeight;
 
-  // Resposta do Mentor IA (simulada)
   setTimeout(() => {
     const response = getMentorResponse(message);
     addMentorMessage(response);
-  }, 1000);
+    falarComVoz(response);
+  }, 800);
 }
 
 function getMentorResponse(message) {
   const msg = message.toLowerCase();
   
   if (msg.includes('token') || msg.includes('verify')) {
-    return "O VERIFY_TOKEN é uma senha que você cria para verificar o webhook. Use algo como: `qebook2025_seguro`. Salve nas variáveis de ambiente da Cloudflare!";
+    return "O VERIFY_TOKEN é uma senha que você cria para verificar o webhook. Use algo como: `qebook2025_seguro`. Salve nas variáveis de ambiente da Cloudflare! Quer ver um vídeo que explica isso? Aqui está: https://www.youtube.com/watch?v=SqYPMDxp91Q (AutomindMAX)";
   }
   if (msg.includes('pixel') || msg.includes('capi')) {
-    return "Pixel + CAPI juntos = match rate de 95%+. Instale o Pixel no frontend e o CAPI no servidor (via webhook da plataforma de pagamento).";
+    return "Pixel + CAPI juntos = match rate de 95%+. Instale o Pixel no frontend e o CAPI no servidor. Vídeo recomendado do Gabriel Chabalas: https://www.youtube.com/watch?v=ViqVotRhBVA";
   }
   if (msg.includes('escalar') || msg.includes('escala')) {
-    return "Regra de ouro: aumente 20-30% a cada 48h. NUNCA dobre o orçamento. Duplique o conjunto vencedor, não edite o original.";
+    return "Regra de ouro: aumente 20-30% a cada 48h. NUNCA dobre o orçamento. Duplique o conjunto vencedor. Vídeo do Odam Sousa: https://www.youtube.com/watch?v=_6fwtXqia4c";
   }
   if (msg.includes('bloqueio') || msg.includes('ban')) {
     return "Para evitar bloqueio: 2 fatores ativos, no máximo 2 admins, domínio verificado, e nunca prometa resultados irreais nos anúncios.";
@@ -872,26 +457,54 @@ function getMentorResponse(message) {
   if (msg.includes('roas')) {
     return "ROAS = Faturamento / Gasto. ROAS 2 = para cada R$1 gasto, volta R$2. Mínimo para escalar: ROAS 2 por 2 dias seguidos.";
   }
+  if (msg.includes('pf') || msg.includes('pessoa física')) {
+    return "Como PF você pode vender com limite de 250 conversas/dia no WhatsApp. É suficiente pra começar. Depois vira MEI para escalar.";
+  }
+  if (msg.includes('rastrear') || msg.includes('venda')) {
+    return "Use UTM em todos os links! Ex: ?utm_source=meta&utm_medium=cpc&utm_campaign=curso. Vídeo do Pedro Sobral explica tudo: https://www.youtube.com/watch?v=raAGNniqjPI";
+  }
   if (msg.includes('olá') || msg.includes('oi') || msg.includes('hey')) {
     return `Olá! Estou aqui para te ajudar com o **Módulo ${currentModule || 1}**. O que você gostaria de saber?`;
+  }
+  if (msg.includes('erro') || msg.includes('travou') || msg.includes('não funcionou')) {
+    return "Entendi que travou. Não se preocupe, isso é parte do processo! 🛠️ Quer que eu te indique um vídeo curto do YouTube que mostra como resolver esse erro específico?";
   }
   
   return "Boa pergunta! No contexto deste módulo, recomendo revisar o conteúdo acima. Se tiver dúvida específica sobre código, me envie o trecho que te ajuda!";
 }
 
-// COPIAR CÓDIGO
+// VOZ
+function falarComVoz(texto) {
+  window.speechSynthesis.cancel();
+  const voz = new SpeechSynthesisUtterance(texto);
+  voz.lang = 'pt-BR';
+  voz.rate = 0.95;
+  voz.pitch = 1.0;
+
+  const vozesDisponiveis = window.speechSynthesis.getVoices();
+  const vozFeminina = vozesDisponiveis.find(v => 
+    v.lang.includes('pt-BR') && 
+    (v.name.includes('Female') || v.name.includes('Luciana') || v.name.includes('Maria') || v.name.includes('Raquel') || v.name.includes('Google'))
+  );
+
+  if (vozFeminina) voz.voice = vozFeminina;
+  window.speechSynthesis.speak(voz);
+}
+
+if (speechSynthesis.onvoiceschanged !== undefined) {
+  speechSynthesis.onvoiceschanged = () => {};
+}
+
+// UTILITÁRIOS
 function copyCode(btn) {
   const code = btn.closest('.rounded-xl').querySelector('pre').textContent;
   navigator.clipboard.writeText(code).then(() => {
     const originalText = btn.innerHTML;
-    btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Copiado!';
-    setTimeout(() => {
-      btn.innerHTML = originalText;
-    }, 2000);
+    btn.innerHTML = '✓ Copiado!';
+    setTimeout(() => { btn.innerHTML = originalText; }, 2000);
   });
 }
 
-// MOSTRAR TELA DE BOAS-VINDAS
 function showWelcome() {
   currentModule = null;
   document.querySelectorAll('.module-content').forEach(el => el.classList.remove('active'));
@@ -900,14 +513,13 @@ function showWelcome() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ESCAPAR HTML
 function escapeHtml(text) {
   const div = document.createElement('div');
   div.textContent = text;
   return div.innerHTML;
 }
 
-// INICIALIZAR
+// INICIAR
 init();
 </script>
 </body>
