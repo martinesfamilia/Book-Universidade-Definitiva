@@ -72,15 +72,15 @@
             Em 7 dias, do zero ao profissional. Business Manager, WhatsApp Cloud API, Pixel, CAPI e escala — com código pronto e Mentor IA Q guiando cada passo.
           </p>
           
-          <!-- BOTÃO DE PAGAMENTO KIWIFY -->
+          <!-- BOTÃO DE PAGAMENTO KIWIFY - PREÇO R$ 247 -->
           <div class="bg-white/10 border border-white/20 rounded-2xl p-6 mb-6">
             <div class="text-center mb-4">
               <div class="text-sm text-white/70 mb-2">Enciclopédia Completa + Tutor IA</div>
-              <div class="text-3xl font-bold text-emerald-400">R$ 197 à vista</div>
-              <div class="text-sm text-white/60 mt-1">ou 12x no cartão - Kiwify</div>
+              <div class="text-3xl font-bold text-emerald-400">R$ 247 à vista</div>
+              <div class="text-sm text-white/60 mt-1">ou 12x de R$ 24,70 no cartão - Kiwify</div>
             </div>
-            <a href="https://pay.kiwify.com.br/UnHt37O" class="block w-full px-8 py-4 rounded-full bg-gradient-to-r from-violet-500 to-indigo-600 font-extrabold text-[16px] shadow-xl hover:shadow-2xl transition text-center">
-              💳 GARANTIR MINHA VAGA POR R$ 197
+            <a href="https://pay.kiwify.com.br/UnHt37O" target="_blank" class="block w-full px-8 py-4 rounded-full bg-gradient-to-r from-violet-500 to-indigo-600 font-extrabold text-[16px] shadow-xl hover:shadow-2xl transition text-center">
+              💳 GARANTIR MINHA VAGA POR R$ 247
             </a>
             <p class="text-center text-xs text-white/60 mt-3">🔒 Pagamento 100% seguro via Kiwify • Acesso imediato após confirmação</p>
           </div>
@@ -120,7 +120,7 @@
       </div>
       <div class="flex gap-2">
         <input id="chatInput" type="text" placeholder="Pergunte..." class="flex-1 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-sm focus:outline-none focus:border-violet-500" onkeypress="if(event.key==='Enter')sendMessage()">
-        <button onclick="sendMessage()" class="px-4 py-2 rounded-full bg-violet-600 hover:bg-violet-700">➤</button>
+        <button onclick="sendMessage()" class="px-4 py-2 rounded-full bg-violet-600 hover:bg-violet-700"></button>
       </div>
     </div>
   </div>
@@ -133,7 +133,7 @@
 // MÓDULOS COMPLETOS (SEM VÍDEOS EMBUTIDOS)
 const modulesData = [
   {
-    id: 1, title: "Business Manager do Zero", subtitle: "Sua base blindada, sem risco de bloqueio", time: "47 min", color: "from-violet-500 to-indigo-600", icon: "️",
+    id: 1, title: "Business Manager do Zero", subtitle: "Sua base blindada, sem risco de bloqueio", time: "47 min", color: "from-violet-500 to-indigo-600", icon: "🛡️",
     videoLink: "https://www.youtube.com/watch?v=NjpsT1wcyrE", videoCredit: "Invente Comunicação",
     lessons: [
       { title: "Criando seu Business Manager", content: "Acesse business.facebook.com e clique em 'Criar Empresa'. Use o nome oficial da sua empresa (ou seu nome se for MEI). Este será o 'cofre' de todos os seus ativos digitais.", code: null },
@@ -142,7 +142,7 @@ const modulesData = [
       { title: "Vinculando Instagram e WhatsApp", content: "Em Configurações → Contas → Instagram e WhatsApp Business. Vincule ambos ao BM para ter controle total.", code: null }
     ],
     checklist: ["BM criado com nome oficial", "Domínio verificado via meta-tag", "2 fatores ativos em todos admins", "Instagram vinculado", "WhatsApp Business vinculado"],
-    mentorTips: ["💡 Use sempre e-mail profissional (não Gmail pessoal) para criar o BM.", "⚠️ Nunca adicione mais de 2 admins no início.", "✅ Quando o domínio aparecer como 'Verificado' (bolinha verde), você está seguro."]
+    mentorTips: ["💡 Use sempre e-mail profissional (não Gmail pessoal) para criar o BM.", "️ Nunca adicione mais de 2 admins no início.", "✅ Quando o domínio aparecer como 'Verificado' (bolinha verde), você está seguro."]
   },
   {
     id: 2, title: "WhatsApp Cloud API Completo", subtitle: "Seu número na nuvem, sem chip, sem ban", time: "1h 12min", color: "from-emerald-500 to-teal-600", icon: "💬",
@@ -189,10 +189,10 @@ const modulesData = [
       { title: "Testando o envio", content: "Envie uma mensagem para seu próprio número via API. Se receber, está tudo funcionando! Parabéns, você tem WhatsApp Cloud API rodando.", code: null }
     ],
     checklist: ["App criado no Meta Developers", "Token de longa duração gerado", "Worker Cloudflare criado", "Variáveis de ambiente configuradas", "Webhook verificado pela Meta", "Número conectado", "Mensagem de teste recebida"],
-    mentorTips: ["💡 O token de 1 ano é REAL. A Meta renovou a política em 2024.", "⚠️ Nunca exponha o token no frontend. Use variáveis de ambiente na Cloudflare.", "✅ Quando receber a mensagem de teste no seu WhatsApp, está 100% funcional."]
+    mentorTips: ["💡 O token de 1 ano é REAL. A Meta renovou a política em 2024.", "️ Nunca exponha o token no frontend. Use variáveis de ambiente na Cloudflare.", "✅ Quando receber a mensagem de teste no seu WhatsApp, está 100% funcional."]
   },
   {
-    id: 3, title: "Pixel + Catálogo + CAPI", subtitle: "Rastreamento que a Meta não bloqueia", time: "58 min", color: "from-blue-500 to-cyan-600", icon: "",
+    id: 3, title: "Pixel + Catálogo + CAPI", subtitle: "Rastreamento que a Meta não bloqueia", time: "58 min", color: "from-blue-500 to-cyan-600", icon: "📊",
     videoLink: "https://www.youtube.com/watch?v=ViqVotRhBVA", videoCredit: "Gabriel Chabalas",
     lessons: [
       { title: "Instalando o Pixel Base", content: "Event Manager → Conectar nova fonte → Web → Pixel → Instalação manual. Copie o código base e cole no <head> do seu site.", code: `<script>
@@ -235,7 +235,7 @@ const payload = {
       { title: "Dashboard de ROAS no Looker Studio", content: "Conecte seu Google Sheets ao Looker Studio (grátis). Crie gráficos: Vendas por campanha, ROAS por criativo, CPA por público.", code: null }
     ],
     checklist: ["UTM em todos os links de anúncio", "Automação de venda → Sheets funcionando", "WhatsApp de boas-vindas enviado", "Dashboard Looker Studio criado", "ROAS calculado corretamente"],
-    mentorTips: ["💡 Teste a automação com uma compra de R$1 antes de escalar.", "⚠️ Sem UTM, você voa às cegas. Sempre use UTM.", "✅ Quando o dashboard mostrar lucro real (não faturamento), está no controle."]
+    mentorTips: ["💡 Teste a automação com uma compra de R$1 antes de escalar.", "️ Sem UTM, você voa às cegas. Sempre use UTM.", "✅ Quando o dashboard mostrar lucro real (não faturamento), está no controle."]
   },
   {
     id: 6, title: "Como Pagar a Meta", subtitle: "PIX, cartão e como nunca ficar sem conta", time: "38 min", color: "from-slate-500 to-gray-700", icon: "💳",
@@ -264,7 +264,7 @@ Solicito revisão humanizada. Obrigado!"` }
   const roas = faturamento / gasto;
   if (roas >= 2 && dias >= 2) return "✅ ESCALAR +20% a cada 48h";
   if (roas < 1.5) return "⛔ OTIMIZAR criativo e público";
-  return " AGUARDAR mais 24h";
+  return "⏳ AGUARDAR mais 24h";
 }` },
       { title: "Criando públicos Lookalike", content: "Públicos → Criar público → Lookalike → Origem: Compradores últimos 60 dias → 1%. Este é o público mais poderoso da Meta.", code: null },
       { title: "Remarketing inteligente", content: "Crie 3 públicos de remarketing: 7 dias (quente), 14 dias (morno), 30 dias (frio). Anúncios diferentes para cada um.", code: null },
@@ -306,7 +306,7 @@ function renderModuleList() {
   }).join('');
 }
 
-// RENDERIZAR MÓDULOS (SEM VÍDEOS EMBUTIDOS)
+// RENDERIZAR MÓDULOS
 function renderModules() {
   const container = document.getElementById('modules');
   container.innerHTML = modulesData.map(m => `
@@ -338,7 +338,7 @@ function renderModules() {
                   <div class="ml-11">
                     <div class="flex items-center justify-between mb-2">
                       <span class="text-[12px] text-violet-300 font-bold">Código pronto:</span>
-                      <button onclick="copyCode(this)" class="px-3 py-1 rounded-full bg-white text-[#0B1B33] text-xs font-bold hover:bg-white/90"> Copiar</button>
+                      <button onclick="copyCode(this)" class="px-3 py-1 rounded-full bg-white text-[#0B1B33] text-xs font-bold hover:bg-white/90">📋 Copiar</button>
                     </div>
                     <pre class="rounded-lg bg-[#070F1F] border border-white/10 p-4 text-[12px] leading-6 overflow-x-auto">${escapeHtml(lesson.code)}</pre>
                   </div>
@@ -397,7 +397,7 @@ function markModuleComplete(id) {
   saveProgress();
   updateProgressBar();
   renderModuleList();
-  addMentorMessage(`Parabéns! Você concluiu o **Módulo ${id}**! 🎉 ${id < 7 ? 'Pronto para o próximo?' : 'Você completou todo o curso! Está pronto para vender!'}`);
+  addMentorMessage(`Parabéns! Você concluiu o **Módulo ${id}**!  ${id < 7 ? 'Pronto para o próximo?' : 'Você completou todo o curso! Está pronto para vender!'}`);
 }
 
 function updateProgressBar() {
@@ -481,7 +481,7 @@ function getMentorResponse(message) {
     return `Olá! Estou aqui para te ajudar com o **Módulo ${currentModule || 1}**. O que você gostaria de saber?`;
   }
   if (msg.includes('erro') || msg.includes('travou') || msg.includes('não funcionou')) {
-    return "Entendi que travou. Não se preocupe, isso é parte do processo! 🛠️ Quer que eu te indique um vídeo curto do YouTube que mostra como resolver esse erro específico?";
+    return "Entendi que travou. Não se preocupe, isso é parte do processo! ️ Quer que eu te indique um vídeo curto do YouTube que mostra como resolver esse erro específico?";
   }
   
   return "Boa pergunta! No contexto deste módulo, recomendo revisar o conteúdo acima. Se tiver dúvida específica sobre código, me envie o trecho que te ajuda!";
