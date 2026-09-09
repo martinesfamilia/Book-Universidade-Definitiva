@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Q e-Book - Enciclopédia Completa | Do Zero ao Lucro</title>
+<title>Q e-Book - Enciclopédia Do Zero ao Lucro | com Tutor IA</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/plus-jakarta-sans@5.0.18/index.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fraunces@5.0.18/index.min.css">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -71,8 +71,22 @@
           <p class="text-[18px] leading-8 text-white/80 mb-8">
             Em 7 dias, do zero ao profissional. Business Manager, WhatsApp Cloud API, Pixel, CAPI e escala — com código pronto e Mentor IA Q guiando cada passo.
           </p>
-          <button onclick="startModule(1)" class="px-8 py-4 rounded-full bg-gradient-to-r from-violet-500 to-indigo-600 font-extrabold text-[16px] shadow-xl hover:shadow-2xl transition">
-            Começar Módulo 01 →
+          
+          <!-- BOTÃO DE PAGAMENTO KIWIFY -->
+          <div class="bg-white/10 border border-white/20 rounded-2xl p-6 mb-6">
+            <div class="text-center mb-4">
+              <div class="text-sm text-white/70 mb-2">Enciclopédia Completa + Tutor IA</div>
+              <div class="text-3xl font-bold text-emerald-400">R$ 197 à vista</div>
+              <div class="text-sm text-white/60 mt-1">ou 12x no cartão - Kiwify</div>
+            </div>
+            <a href="https://pay.kiwify.com.br/UnHt37O" class="block w-full px-8 py-4 rounded-full bg-gradient-to-r from-violet-500 to-indigo-600 font-extrabold text-[16px] shadow-xl hover:shadow-2xl transition text-center">
+              💳 GARANTIR MINHA VAGA POR R$ 197
+            </a>
+            <p class="text-center text-xs text-white/60 mt-3">🔒 Pagamento 100% seguro via Kiwify • Acesso imediato após confirmação</p>
+          </div>
+          
+          <button onclick="startModule(1)" class="px-8 py-4 rounded-full bg-white/10 border border-white/20 font-bold text-[16px] hover:bg-white/20 transition">
+            Ver Conteúdo Gratuito →
           </button>
         </div>
       </div>
@@ -91,7 +105,7 @@
         <div class="w-10 h-10 rounded-full bg-white text-[#4F46E5] grid place-items-center font-black">Q</div>
         <div>
           <div class="font-bold">Mentor IA Q</div>
-          <div class="text-[11px] text-white/80"> Online</div>
+          <div class="text-[11px] text-white/80">🟢 Online</div>
         </div>
       </div>
       <button onclick="toggleChat()" class="text-white/80 hover:text-white">✕</button>
@@ -119,7 +133,7 @@
 // MÓDULOS COMPLETOS (SEM VÍDEOS EMBUTIDOS)
 const modulesData = [
   {
-    id: 1, title: "Business Manager do Zero", subtitle: "Sua base blindada, sem risco de bloqueio", time: "47 min", color: "from-violet-500 to-indigo-600", icon: "🛡️",
+    id: 1, title: "Business Manager do Zero", subtitle: "Sua base blindada, sem risco de bloqueio", time: "47 min", color: "from-violet-500 to-indigo-600", icon: "️",
     videoLink: "https://www.youtube.com/watch?v=NjpsT1wcyrE", videoCredit: "Invente Comunicação",
     lessons: [
       { title: "Criando seu Business Manager", content: "Acesse business.facebook.com e clique em 'Criar Empresa'. Use o nome oficial da sua empresa (ou seu nome se for MEI). Este será o 'cofre' de todos os seus ativos digitais.", code: null },
@@ -128,7 +142,7 @@ const modulesData = [
       { title: "Vinculando Instagram e WhatsApp", content: "Em Configurações → Contas → Instagram e WhatsApp Business. Vincule ambos ao BM para ter controle total.", code: null }
     ],
     checklist: ["BM criado com nome oficial", "Domínio verificado via meta-tag", "2 fatores ativos em todos admins", "Instagram vinculado", "WhatsApp Business vinculado"],
-    mentorTips: [" Use sempre e-mail profissional (não Gmail pessoal) para criar o BM.", "⚠️ Nunca adicione mais de 2 admins no início.", "✅ Quando o domínio aparecer como 'Verificado' (bolinha verde), você está seguro."]
+    mentorTips: ["💡 Use sempre e-mail profissional (não Gmail pessoal) para criar o BM.", "⚠️ Nunca adicione mais de 2 admins no início.", "✅ Quando o domínio aparecer como 'Verificado' (bolinha verde), você está seguro."]
   },
   {
     id: 2, title: "WhatsApp Cloud API Completo", subtitle: "Seu número na nuvem, sem chip, sem ban", time: "1h 12min", color: "from-emerald-500 to-teal-600", icon: "💬",
@@ -175,10 +189,10 @@ const modulesData = [
       { title: "Testando o envio", content: "Envie uma mensagem para seu próprio número via API. Se receber, está tudo funcionando! Parabéns, você tem WhatsApp Cloud API rodando.", code: null }
     ],
     checklist: ["App criado no Meta Developers", "Token de longa duração gerado", "Worker Cloudflare criado", "Variáveis de ambiente configuradas", "Webhook verificado pela Meta", "Número conectado", "Mensagem de teste recebida"],
-    mentorTips: ["💡 O token de 1 ano é REAL. A Meta renovou a política em 2024.", "️ Nunca exponha o token no frontend. Use variáveis de ambiente na Cloudflare.", "✅ Quando receber a mensagem de teste no seu WhatsApp, está 100% funcional."]
+    mentorTips: ["💡 O token de 1 ano é REAL. A Meta renovou a política em 2024.", "⚠️ Nunca exponha o token no frontend. Use variáveis de ambiente na Cloudflare.", "✅ Quando receber a mensagem de teste no seu WhatsApp, está 100% funcional."]
   },
   {
-    id: 3, title: "Pixel + Catálogo + CAPI", subtitle: "Rastreamento que a Meta não bloqueia", time: "58 min", color: "from-blue-500 to-cyan-600", icon: "📊",
+    id: 3, title: "Pixel + Catálogo + CAPI", subtitle: "Rastreamento que a Meta não bloqueia", time: "58 min", color: "from-blue-500 to-cyan-600", icon: "",
     videoLink: "https://www.youtube.com/watch?v=ViqVotRhBVA", videoCredit: "Gabriel Chabalas",
     lessons: [
       { title: "Instalando o Pixel Base", content: "Event Manager → Conectar nova fonte → Web → Pixel → Instalação manual. Copie o código base e cole no <head> do seu site.", code: `<script>
@@ -210,7 +224,7 @@ const payload = {
       { title: "Regras automáticas de proteção", content: "Crie regras para pausar anúncios caros automaticamente. Ex: Se CPA > R$45 em 2 dias, pausar conjunto.", code: null }
     ],
     checklist: ["Campanha criada com objetivo correto", "3 conjuntos configurados", "3 criativos por conjunto", "Advantage+ ativado", "CTA WhatsApp configurado", "Regra automática de CPA criada"],
-    mentorTips: [" Vídeos UGC (User Generated Content) convertem 3x mais que vídeos produzidos.", "⚠️ Nunca edite um anúncio ativo. Duplique e pause o original.", "✅ Quando tiver 3 vendas com ROAS > 2, está na hora de escalar."]
+    mentorTips: ["💡 Vídeos UGC (User Generated Content) convertem 3x mais que vídeos produzidos.", "⚠️ Nunca edite um anúncio ativo. Duplique e pause o original.", "✅ Quando tiver 3 vendas com ROAS > 2, está na hora de escalar."]
   },
   {
     id: 5, title: "Rastrear Quem Comprou", subtitle: "UTM + Google Sheets que fala a verdade", time: "52 min", color: "from-amber-500 to-orange-600", icon: "📈",
@@ -250,7 +264,7 @@ Solicito revisão humanizada. Obrigado!"` }
   const roas = faturamento / gasto;
   if (roas >= 2 && dias >= 2) return "✅ ESCALAR +20% a cada 48h";
   if (roas < 1.5) return "⛔ OTIMIZAR criativo e público";
-  return "⏳ AGUARDAR mais 24h";
+  return " AGUARDAR mais 24h";
 }` },
       { title: "Criando públicos Lookalike", content: "Públicos → Criar público → Lookalike → Origem: Compradores últimos 60 dias → 1%. Este é o público mais poderoso da Meta.", code: null },
       { title: "Remarketing inteligente", content: "Crie 3 públicos de remarketing: 7 dias (quente), 14 dias (morno), 30 dias (frio). Anúncios diferentes para cada um.", code: null },
@@ -324,7 +338,7 @@ function renderModules() {
                   <div class="ml-11">
                     <div class="flex items-center justify-between mb-2">
                       <span class="text-[12px] text-violet-300 font-bold">Código pronto:</span>
-                      <button onclick="copyCode(this)" class="px-3 py-1 rounded-full bg-white text-[#0B1B33] text-xs font-bold hover:bg-white/90">📋 Copiar</button>
+                      <button onclick="copyCode(this)" class="px-3 py-1 rounded-full bg-white text-[#0B1B33] text-xs font-bold hover:bg-white/90"> Copiar</button>
                     </div>
                     <pre class="rounded-lg bg-[#070F1F] border border-white/10 p-4 text-[12px] leading-6 overflow-x-auto">${escapeHtml(lesson.code)}</pre>
                   </div>
